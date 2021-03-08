@@ -2,7 +2,7 @@ import "./styles.css";
 import { withTina, useForm, usePlugin } from "tinacms";
 import { InlineForm, InlineBlocks } from "react-tinacms-inline";
 import { HeroBlock, hero_template } from "./components/hero";
-import { Nav } from "./components/nav";
+import { Nav, NAV_FIELDS } from "./components/nav";
 import { Footer } from "./components/footer";
 import { FeaturesBlock, features_template } from "./components/features";
 
@@ -34,6 +34,7 @@ const App = () => {
           headline: "This is a large display heading.",
           text:
             "Deploy your mvp in minutes, not days. WT offers you a a wide selection swapable sections for your landing page.",
+          image: "https://source.unsplash.com/collection/300768/720x600",
         },
         {
           _template: "features",
@@ -63,7 +64,23 @@ const App = () => {
         },
       ],
     },
-    fields: [],
+    fields: [
+      {
+        name: "nav",
+        label: "Nav",
+        component: "group",
+        fields: NAV_FIELDS,
+      },
+      {
+        label: "Page Sections",
+        name: "blocks",
+        component: "blocks",
+        templates: {
+          hero: hero_template,
+          features: features_template,
+        },
+      },
+    ],
     onSubmit: (values) => {
       alert(
         `You control what happens with your data \n --- \n ${JSON.stringify(

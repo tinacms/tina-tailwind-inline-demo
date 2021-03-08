@@ -1,6 +1,6 @@
 import { BlocksControls, InlineTextarea } from "react-tinacms-inline";
 
-export const Hero = () => {
+export const Hero = ({ data }) => {
   return (
     <section class="text-gray-700  body-font">
       <div class="container flex flex-col items-center px-8 py-24 mx-auto md:flex-row">
@@ -45,7 +45,7 @@ export const Hero = () => {
           <img
             class="object-cover object-center rounded-lg "
             alt="hero"
-            src="https://source.unsplash.com/collection/300768/720x600"
+            src={data.image}
           />
         </div>
       </div>
@@ -53,14 +53,14 @@ export const Hero = () => {
   );
 };
 
-export function HeroBlock(props) {
+export function HeroBlock({ data, index }) {
   return (
     <BlocksControls
-      index={props.index}
+      index={index}
       focusRing={{ offset: -12 }}
       insetControls={true}
     >
-      <Hero />
+      <Hero data={data} />
     </BlocksControls>
   );
 }
@@ -72,6 +72,28 @@ export const hero_template = {
     headline: "This is a large display heading.",
     text:
       "Deploy your mvp in minutes, not days. WT offers you a a wide selection swapable sections for your landing page.",
+    image: "https://source.unsplash.com/collection/300768/720x600",
   },
-  fields: [],
+  fields: [
+    {
+      name: "tagline",
+      label: "Tagline",
+      component: "text",
+    },
+    {
+      name: "headline",
+      label: "Headline",
+      component: "textarea",
+    },
+    {
+      name: "text",
+      label: "Text",
+      component: "textarea",
+    },
+    {
+      name: "image",
+      label: "Image",
+      component: "text",
+    },
+  ],
 };

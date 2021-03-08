@@ -20,32 +20,7 @@ export const Nav = ({ data }) => {
             focusRing={{ offset: 16 }}
             insetControls={true}
             name="nav"
-            fields={[
-              {
-                label: "Nav Items",
-                name: "items",
-                component: "group-list",
-                itemProps: (item) => ({
-                  label: item.label,
-                }),
-                defaultItem: () => ({
-                  label: "Nav Link",
-                  link: "/",
-                }),
-                fields: [
-                  {
-                    label: "Label",
-                    name: "label",
-                    component: "text",
-                  },
-                  {
-                    label: "Link",
-                    name: "link",
-                    component: "text",
-                  },
-                ],
-              },
-            ]}
+            fields={NAV_FIELDS}
           >
             {data.items.map(function (item, index) {
               return (
@@ -63,3 +38,35 @@ export const Nav = ({ data }) => {
     </div>
   );
 };
+
+export const NAV_FIELDS = [
+  {
+    name: "name",
+    label: "Name",
+    component: "text",
+  },
+  {
+    label: "Nav Items",
+    name: "items",
+    component: "group-list",
+    itemProps: (item) => ({
+      label: item.label,
+    }),
+    defaultItem: () => ({
+      label: "Nav Link",
+      link: "/",
+    }),
+    fields: [
+      {
+        label: "Label",
+        name: "label",
+        component: "text",
+      },
+      {
+        label: "Link",
+        name: "link",
+        component: "text",
+      },
+    ],
+  },
+];
