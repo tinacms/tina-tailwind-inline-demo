@@ -30,9 +30,36 @@ const App = () => {
       blocks: [
         {
           _template: "hero",
+          tagline: "Tagline Above Text",
+          headline: "This is a large display heading.",
+          text:
+            "Deploy your mvp in minutes, not days. WT offers you a a wide selection swapable sections for your landing page.",
         },
         {
           _template: "features",
+          items: [
+            {
+              _template: "feature",
+              title: "Longer Information 1",
+              text:
+                "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
+              link: "/",
+            },
+            {
+              _template: "feature",
+              title: "Longer Information 2",
+              text:
+                "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
+              link: "/",
+            },
+            {
+              _template: "feature",
+              title: "Longer Information 3",
+              text:
+                "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
+              link: "/",
+            },
+          ],
         },
       ],
     },

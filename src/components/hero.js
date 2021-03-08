@@ -1,19 +1,18 @@
-import { BlocksControls } from "react-tinacms-inline";
+import { BlocksControls, InlineTextarea } from "react-tinacms-inline";
 
 export const Hero = () => {
   return (
     <section class="text-gray-700  body-font">
       <div class="container flex flex-col items-center px-8 py-24 mx-auto md:flex-row">
         <div class="flex flex-col    w-full pt-0 mb-16 text-left lg:flex-grow md:w-1/2 xl:mr-20 md:pr-24 md:items-start md:mb-0 ">
-          <h2 class="mb-4 text-sm font-bold tracking-widest text-black title-font">
-            Tagline Above Text
+          <h2 class="w-full	mb-4 text-sm font-bold tracking-widest text-black title-font">
+            <InlineTextarea name="tagline" />
           </h2>
-          <h1 class="mb-6 text-2xl font-bold tracking-tight text-blue-500 text-left lg:text-5xl title-font">
-            This is a large display heading.
+          <h1 class="w-full	mb-6 text-2xl font-bold tracking-tight text-blue-500 text-left lg:text-5xl title-font">
+            <InlineTextarea name="headline" />
           </h1>
-          <p class="mb-8 text-base leading-relaxed text-gray-700 text-left lg:text-1xl">
-            Deploy your mvp in minutes, not days. WT offers you a a wide
-            selection swapable sections for your landing page.
+          <p class="w-full	mb-8 text-base leading-relaxed text-gray-700 text-left lg:text-1xl">
+            <InlineTextarea name="text" />
           </p>
           <div class="flex flex-wrap ">
             <button class="flex items-center px-8 py-3 mt-auto font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 mr-6 my-4 whitespace-nowrap">
@@ -68,6 +67,11 @@ export function HeroBlock(props) {
 
 export const hero_template = {
   label: "Hero",
-  defaultItem: {},
+  defaultItem: {
+    tagline: "Tagline Above Text",
+    headline: "This is a large display heading.",
+    text:
+      "Deploy your mvp in minutes, not days. WT offers you a a wide selection swapable sections for your landing page.",
+  },
   fields: [],
 };
