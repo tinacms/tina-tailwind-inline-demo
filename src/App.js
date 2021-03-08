@@ -1,6 +1,9 @@
 import "./styles.css";
 import { withTina, useForm, usePlugin } from "tinacms";
 import { Hero } from "./components/hero";
+import { Nav } from "./components/nav";
+import { Footer } from "./components/footer";
+import { Features } from "./components/features";
 
 const App = () => {
   // create a Tina form
@@ -36,7 +39,10 @@ const App = () => {
   // use `data` in your render to access form-mutated values
   return (
     <div className="App">
+      <Nav />
       <Hero />
+      <Features />
+      <Footer />
     </div>
   );
 };

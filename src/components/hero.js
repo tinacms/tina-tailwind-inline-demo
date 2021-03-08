@@ -1,24 +1,24 @@
 export const Hero = () => {
   return (
-    <section class="text-gray-700 body-font">
-      <div class="container flex flex-col items-center px-5 py-16 mx-auto md:flex-row">
-        <div class="flex flex-col items-center w-full pt-0 mb-16 text-left lg:flex-grow md:w-1/2 xl:mr-20 md:pr-24 md:items-start md:text-left md:mb-0 lg:text-center">
-          <h2 class="mb-1 text-xs font-medium tracking-widest text-black title-font">
-            Your tagline
+    <section class="text-gray-700  body-font">
+      <div class="container flex flex-col items-center px-8 py-24 mx-auto md:flex-row">
+        <div class="flex flex-col    w-full pt-0 mb-16 text-left lg:flex-grow md:w-1/2 xl:mr-20 md:pr-24 md:items-start md:mb-0 ">
+          <h2 class="mb-4 text-sm font-bold tracking-widest text-black title-font">
+            Tagline Above Text
           </h2>
-          <h1 class="mb-8 text-2xl font-bold tracking-tighter text-center text-black lg:text-left lg:text-5xl title-font">
-            Medium length display headline.
+          <h1 class="mb-6 text-2xl font-bold tracking-tight text-blue-500 text-left lg:text-5xl title-font">
+            This is a large display heading.
           </h1>
-          <p class="mb-8 text-base leading-relaxed text-center text-gray-700 lg:text-left lg:text-1xl">
+          <p class="mb-8 text-base leading-relaxed text-gray-700 text-left lg:text-1xl">
             Deploy your mvp in minutes, not days. WT offers you a a wide
             selection swapable sections for your landing page.
           </p>
-          <div class="flex justify-center">
-            <button class="flex items-center px-6 py-2 mt-auto font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2">
-              Action
+          <div class="flex flex-wrap ">
+            <button class="flex items-center px-8 py-3 mt-auto font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 mr-6 my-4 whitespace-nowrap">
+              Primary Action
             </button>
-            <p class="mt-2 text-sm text-center text-gray-600 md:ml-6 md:mt-0 sm:text-left">
-              It will take you to candy shop.
+            <p class="mt-2 text-sms text-gray-600 md:mt-0 sm:text-left">
+              Secondary action description.
               <br class="hidden lg:block" />
               <a
                 href="#"
@@ -40,11 +40,11 @@ export const Hero = () => {
             </p>
           </div>
         </div>
-        <div class="w-5/6 lg:max-w-lg lg:w-full md:w-1/2">
+        <div class="w-100 lg:max-w-lg lg:w-full md:w-1/2">
           <img
             class="object-cover object-center rounded-lg "
             alt="hero"
-            src="https://dummyimage.com/720x600/F3F4F7/8693ac"
+            src="https://source.unsplash.com/collection/300768/720x600"
           />
         </div>
       </div>
