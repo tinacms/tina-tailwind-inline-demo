@@ -4,7 +4,6 @@ export const Footer = () => {
       <div class="container flex flex-col flex-wrap p-8 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap ">
         <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
           <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start ">
-            <div class="w-2 h-2 p-2 mr-2 rounded-full bg-gradient-to-tr from-cyan-400 to-lightBlue-500"></div>
             <h2 class="text-lg font-bold tracking-tighter text-black uppercase transition duration-500 ease-in-out transform hover:text-lightBlack-500 dark:text-lightBlue-400">
               Company Name
             </h2>

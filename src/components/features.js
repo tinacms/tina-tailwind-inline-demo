@@ -5,7 +5,7 @@ export const Features = () => {
         <div class="flex flex-wrap text-left">
           <div class="px-8 py-6 lg:w-1/3 md:w-full">
             <div class="flex items-center mb-3">
-              <div class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mb-5 mr-3 text-blue-800 bg-gray-200 rounded-full">
+              <div class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mb-5 mr-3 text-gray-50 bg-blue-400 rounded-full">
                 <svg
                   class="w-6 h-6"
                   xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,7 @@ export const Features = () => {
           </div>
           <div class="px-8 py-6 lg:w-1/3 md:w-full">
             <div class="flex items-center mb-3">
-              <div class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mb-5 mr-3 text-blue-800 bg-gray-200 rounded-full">
+              <div class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mb-5 mr-3 text-gray-50 bg-blue-400 rounded-full">
                 <svg
                   class="w-6 h-6"
                   xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +87,7 @@ export const Features = () => {
           </div>
           <div class="px-8 py-6 lg:w-1/3 md:w-full">
             <div class="flex items-center mb-3">
-              <div class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mb-5 mr-3 text-blue-800 bg-gray-200 rounded-full">
+              <div class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mb-5 mr-3 text-gray-50 bg-blue-400 rounded-full">
                 <svg
                   class="w-6 h-6"
                   xmlns="http://www.w3.org/2000/svg"
