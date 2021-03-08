@@ -1,3 +1,5 @@
+import { BlocksControls } from "react-tinacms-inline";
+
 export const Hero = () => {
   return (
     <section class="text-gray-700  body-font">
@@ -50,4 +52,22 @@ export const Hero = () => {
       </div>
     </section>
   );
+};
+
+export function HeroBlock(props) {
+  return (
+    <BlocksControls
+      index={props.index}
+      focusRing={{ offset: -12 }}
+      insetControls={true}
+    >
+      <Hero />
+    </BlocksControls>
+  );
+}
+
+export const hero_template = {
+  label: "Hero",
+  defaultItem: {},
+  fields: [],
 };

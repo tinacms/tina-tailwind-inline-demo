@@ -1,3 +1,5 @@
+import { BlocksControls } from "react-tinacms-inline";
+
 export const Features = () => {
   return (
     <section class="text-gray-700 body-font bg-gray-50">
@@ -130,4 +132,22 @@ export const Features = () => {
       </div>
     </section>
   );
+};
+
+export function FeaturesBlock(props) {
+  return (
+    <BlocksControls
+      index={props.index}
+      focusRing={{ offset: -12 }}
+      insetControls={true}
+    >
+      <Features />
+    </BlocksControls>
+  );
+}
+
+export const features_template = {
+  label: "Features",
+  defaultItem: {},
+  fields: [],
 };
