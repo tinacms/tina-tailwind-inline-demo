@@ -2,7 +2,7 @@ import "./styles.css";
 import { withTina, useForm, usePlugin } from "tinacms";
 import { InlineForm, InlineBlocks } from "react-tinacms-inline";
 import { HeroBlock, hero_template } from "./components/hero";
-import { Nav, NAV_FIELDS } from "./components/nav";
+import { Nav } from "./components/nav";
 import { Footer } from "./components/footer";
 import { FeaturesBlock, features_template } from "./components/features";
 
@@ -11,7 +11,7 @@ const App = () => {
   const [data, form] = useForm({
     initialValues: {
       nav: {
-        name: "Company Test Name",
+        name: "Company Name",
         items: [
           {
             label: "Pricing",
@@ -64,23 +64,7 @@ const App = () => {
         },
       ],
     },
-    fields: [
-      {
-        name: "nav",
-        label: "Nav",
-        component: "group",
-        fields: NAV_FIELDS,
-      },
-      {
-        label: "Page Sections",
-        name: "blocks",
-        component: "blocks",
-        templates: {
-          hero: hero_template,
-          features: features_template,
-        },
-      },
-    ],
+    fields: [],
     onSubmit: (values) => {
       alert(
         `You control what happens with your data \n --- \n ${JSON.stringify(
@@ -118,4 +102,4 @@ const PAGE_BLOCKS = {
   },
 };
 
-export default withTina(App, { enabled: true, sidebar: true });
+export default withTina(App, { enabled: true, sidebar: false });

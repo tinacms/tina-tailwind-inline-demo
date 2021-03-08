@@ -1,3 +1,5 @@
+import { InlineText } from "react-tinacms-inline";
+
 export const Footer = () => {
   return (
     <footer class="text-gray-700 border-t body-font">
@@ -5,7 +7,7 @@ export const Footer = () => {
         <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
           <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start ">
             <h2 class="text-lg font-bold tracking-tighter text-black uppercase transition duration-500 ease-in-out transform hover:text-lightBlack-500 dark:text-lightBlue-400">
-              Company Name
+              <InlineText focusRing={{ offset: 8 }} name="nav.name" />
             </h2>
           </a>
         </div>
