@@ -30,7 +30,7 @@ const App = () => {
       blocks: [
         {
           _template: "hero",
-          tagline: "Tagline Above Text",
+          tagline: "TAGLINE ABOVE TEXT",
           headline: "This is a large display heading.",
           text:
             "Deploy your mvp in minutes, not days. WT offers you a a wide selection swapable sections for your landing page.",
@@ -41,21 +41,21 @@ const App = () => {
           items: [
             {
               _template: "feature",
-              title: "Longer Information 1",
+              title: "Amazing Feature",
               text:
                 "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
               link: "/",
             },
             {
               _template: "feature",
-              title: "Longer Information 2",
+              title: "Another Great Thing",
               text:
                 "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
               link: "/",
             },
             {
               _template: "feature",
-              title: "Longer Information 3",
+              title: "Three To Round It Out",
               text:
                 "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
               link: "/",

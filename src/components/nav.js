@@ -9,7 +9,11 @@ export const Nav = ({ data }) => {
           class="pr-2 lg:pr-8 mb-4 md:mb-0 focus:outline-none flex items-center"
         >
           <div class="inline-flex items-center">
-            <div class="w-3 h-3 p-3 mr-2 rounded-full bg-blue-400"></div>
+            <div class="w-3 h-3 p-3 mr-2 rounded-full bg-blue-400 flex content-center items-center justify-center">
+              <span class="text-white font-bold title-font">
+                {data.name.charAt(0)}
+              </span>
+            </div>
             <h2 class="font-semibold tracking-tighter transition duration-1000 ease-in-out transform text-blueGray-500 dark:text-blueGray-200 lg:text-md text-bold">
               <InlineText focusRing={{ offset: 8 }} name="nav.name" />
             </h2>
