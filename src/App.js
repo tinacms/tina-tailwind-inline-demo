@@ -1,22 +1,23 @@
 import "./styles.css";
 import { withTina, useForm, usePlugin } from "tinacms";
+import { Hero } from "./components/hero";
 
 const App = () => {
   // create a Tina form
   const [data, form] = useForm({
     initialValues: {
       title: "Tina Demo",
-      content: "Click the pencil icon to edit"
+      content: "Click the pencil icon to edit",
     },
     fields: [
       {
         name: "title",
-        component: "text"
+        component: "text",
       },
       {
         name: "content",
-        component: "textarea"
-      }
+        component: "textarea",
+      },
     ],
     onSubmit: (values) => {
       alert(
@@ -26,7 +27,7 @@ const App = () => {
           2
         )}`
       );
-    }
+    },
   });
 
   // register the Tina form so it appears in the sidebar
@@ -35,8 +36,7 @@ const App = () => {
   // use `data` in your render to access form-mutated values
   return (
     <div className="App">
-      <h1>{data.title}</h1>
-      <h2>{data.content}</h2>
+      <Hero />
     </div>
   );
 };
