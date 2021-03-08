@@ -102,4 +102,4 @@ const PAGE_BLOCKS = {
   },
 };
 
-export default withTina(App, { enabled: true, sidebar: false });
+export default withTina(App, { enabled: true, sidebar: false, toolbar: true });
