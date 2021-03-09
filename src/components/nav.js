@@ -45,11 +45,6 @@ export const Nav = ({ data }) => {
 
 export const NAV_FIELDS = [
   {
-    name: "name",
-    label: "Name",
-    component: "text",
-  },
-  {
     label: "Nav Items",
     name: "items",
     component: "group-list",
