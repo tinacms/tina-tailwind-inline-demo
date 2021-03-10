@@ -4,7 +4,7 @@ import {
   InlineBlocks,
 } from "react-tinacms-inline";
 
-export const Feature = ({ index, data }) => {
+export const FeatureBlock = ({ index, data }) => {
   return (
     <div class="px-8 py-6 lg:w-1/3 md:w-full">
       <BlocksControls
@@ -86,7 +86,6 @@ export const feature_template = {
 };
 
 export const Features = ({ data }) => {
-  console.log(data);
   return (
     <section class="text-gray-700 body-font bg-gray-50">
       <div class="container py-24 mx-auto">
@@ -149,7 +148,7 @@ export const features_template = {
         label: item.title,
       }),
       templates: {
-        feature: Feature,
+        feature: feature_template,
       },
     },
   ],
@@ -157,7 +156,7 @@ export const features_template = {
 
 const FEATURE_BLOCKS = {
   feature: {
-    Component: Feature,
+    Component: FeatureBlock,
     template: feature_template,
   },
 };
