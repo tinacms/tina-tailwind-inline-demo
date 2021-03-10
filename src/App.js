@@ -54,21 +54,36 @@ const App = () => {
               title: "Amazing Feature",
               text:
                 "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
-              link: "/",
+              actions: [
+                {
+                  label: "Learn More",
+                  type: "link",
+                },
+              ],
             },
             {
               _template: "feature",
               title: "Another Great Thing",
               text:
                 "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
-              link: "/",
+              actions: [
+                {
+                  label: "Learn More",
+                  type: "link",
+                },
+              ],
             },
             {
               _template: "feature",
               title: "Three To Round It Out",
               text:
                 "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
-              link: "/",
+              actions: [
+                {
+                  label: "Learn More",
+                  type: "link",
+                },
+              ],
             },
           ],
         },

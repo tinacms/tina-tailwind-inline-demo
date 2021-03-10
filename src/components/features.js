@@ -3,6 +3,7 @@ import {
   InlineTextarea,
   InlineBlocks,
 } from "react-tinacms-inline";
+import { ACTION_FIELDS, Actions } from "./actions";
 
 export const FeatureBlock = ({ index, data }) => {
   return (
@@ -31,25 +32,7 @@ export const FeatureBlock = ({ index, data }) => {
         <p class="mb-4 text-base leading-relaxed">
           <InlineTextarea name="text" />
         </p>
-        {data.link && (
-          <a
-            href={data.link}
-            class="inline-flex items-center font-semibold text-blue-500 md:mb-2 lg:mb-0 hover:text-blue-400 "
-          >
-            Learn More
-            <svg
-              class="w-4 h-4 ml-2"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="20"
-              height="20"
-              fill="currentColor"
-            >
-              <path fill="none" d="M0 0h24v24H0z" />
-              <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
-            </svg>
-          </a>
-        )}
+        <Actions actions={data.actions} />
       </BlocksControls>
     </div>
   );
@@ -61,7 +44,12 @@ export const feature_template = {
     title: "Feature Heading Text",
     text:
       "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
-    link: "/",
+    actions: [
+      {
+        label: "Learn More",
+        type: "link",
+      },
+    ],
   },
   itemProps: (item) => ({
     label: item.title,
@@ -77,11 +65,7 @@ export const feature_template = {
       label: "Text",
       component: "text",
     },
-    {
-      name: "link",
-      label: "Link",
-      component: "text",
-    },
+    ...ACTION_FIELDS,
   ],
 };
 
@@ -121,21 +105,36 @@ export const features_template = {
         title: "Longer Information 1",
         text:
           "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
-        link: "/",
+        actions: [
+          {
+            label: "Learn More",
+            type: "link",
+          },
+        ],
       },
       {
         _template: "feature",
         title: "Longer Information 2",
         text:
           "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
-        link: "/",
+        actions: [
+          {
+            label: "Learn More",
+            type: "link",
+          },
+        ],
       },
       {
         _template: "feature",
         title: "Longer Information 3",
         text:
           "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
-        link: "/",
+        actions: [
+          {
+            label: "Learn More",
+            type: "link",
+          },
+        ],
       },
     ],
   },
