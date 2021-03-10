@@ -2,7 +2,7 @@ import { InlineGroup } from "react-tinacms-inline";
 
 export const Actions = ({ actions }) => {
   return (
-    <div>
+    <div class="w-full">
       <InlineGroup
         name=""
         focusRing={{ offset: 16 }}
