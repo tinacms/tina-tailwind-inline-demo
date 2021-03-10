@@ -34,7 +34,10 @@ const App = () => {
           headline: "This is a large display heading.",
           text:
             "Deploy your mvp in minutes, not days. WT offers you a a wide selection swapable sections for your landing page.",
-          image: "https://source.unsplash.com/collection/300768/720x500",
+          image: {
+            src: "https://source.unsplash.com/collection/300768/720x500",
+            alt: "Photo from Unsplash",
+          },
           actions: [
             {
               label: "Primary Action",

@@ -1,4 +1,8 @@
-import { BlocksControls, InlineTextarea } from "react-tinacms-inline";
+import {
+  InlineGroup,
+  BlocksControls,
+  InlineTextarea,
+} from "react-tinacms-inline";
 import { ACTION_FIELDS, Actions } from "./actions";
 
 export const Hero = ({ data }) => {
@@ -18,11 +22,18 @@ export const Hero = ({ data }) => {
           <Actions actions={data.actions} />
         </div>
         <div class="w-100 md:w-1/2 lg:w-2/5">
-          <img
-            class="object-cover object-center rounded-lg "
-            alt="hero"
-            src={data.image}
-          />
+          <InlineGroup
+            name="image"
+            focusRing={{ offset: 16 }}
+            insetControls={true}
+            fields={IMAGE_FIELDS}
+          >
+            <img
+              class="object-cover object-center rounded-lg "
+              alt={data.image.alt}
+              src={data.image.src}
+            />
+          </InlineGroup>
         </div>
       </div>
     </section>
@@ -48,7 +59,10 @@ export const hero_template = {
     headline: "This is a large display heading.",
     text:
       "Deploy your mvp in minutes, not days. WT offers you a a wide selection swapable sections for your landing page.",
-    image: "https://source.unsplash.com/collection/300768/720x500",
+    image: {
+      src: "https://source.unsplash.com/collection/300768/720x500",
+      alt: "Photo from Unsplash",
+    },
     actions: [
       {
         label: "Primary Action",
@@ -79,8 +93,23 @@ export const hero_template = {
     {
       name: "image",
       label: "Image",
-      component: "text",
+      component: "group",
+      fields: IMAGE_FIELDS,
     },
+    ,
     ...ACTION_FIELDS,
   ],
 };
+
+export const IMAGE_FIELDS = [
+  {
+    name: "src",
+    label: "Image Source",
+    component: "text",
+  },
+  {
+    name: "alt",
+    label: "Alt Text",
+    component: "text",
+  },
+];
