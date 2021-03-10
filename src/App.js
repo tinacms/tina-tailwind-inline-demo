@@ -100,6 +100,13 @@ const App = () => {
           ],
         },
       ],
+      footer: {
+        social: {
+          facebook: "/",
+          twitter: "/",
+          instagram: "/",
+        },
+      },
     },
     fields: [],
     onSubmit: (values) => {
@@ -116,7 +123,7 @@ const App = () => {
       <InlineForm form={form}>
         <Nav data={data.nav} />
         <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} />
-        <Footer />
+        <Footer name={data.nav.name} data={data.footer} />
       </InlineForm>
       {showModal && (
         <TinaModal
