@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./styles.css";
-import { withTina, useForm, usePlugin } from "tinacms";
+import { useCMS, withTina, useForm, usePlugin } from "tinacms";
 import { InlineForm, InlineBlocks } from "react-tinacms-inline";
 import { HeroBlock, hero_template } from "./components/hero";
 import { Nav } from "./components/nav";
@@ -9,6 +9,12 @@ import { FeaturesBlock, features_template } from "./components/features";
 import { TinaModal } from "./components/modal";
 
 const App = () => {
+  const cms = useCMS();
+  cms.plugins.remove({
+    __type: "screen",
+    name: "Media Manager",
+  });
+
   const [showModal, setShowModal] = React.useState(false);
   // create a Tina form
   const [data, form] = useForm({
