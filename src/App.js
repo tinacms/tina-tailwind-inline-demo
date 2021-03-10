@@ -1,3 +1,4 @@
+import * as React from "react";
 import "./styles.css";
 import { withTina, useForm, usePlugin } from "tinacms";
 import { InlineForm, InlineBlocks } from "react-tinacms-inline";
@@ -5,8 +6,10 @@ import { HeroBlock, hero_template } from "./components/hero";
 import { Nav } from "./components/nav";
 import { Footer } from "./components/footer";
 import { FeaturesBlock, features_template } from "./components/features";
+import { TinaModal } from "./components/modal";
 
 const App = () => {
+  const [showModal, setShowModal] = React.useState(false);
   // create a Tina form
   const [data, form] = useForm({
     initialValues: {
@@ -94,13 +97,7 @@ const App = () => {
     },
     fields: [],
     onSubmit: (values) => {
-      alert(
-        `You control what happens with your data \n --- \n ${JSON.stringify(
-          values,
-          null,
-          2
-        )}`
-      );
+      setShowModal(true);
     },
   });
 
@@ -115,6 +112,14 @@ const App = () => {
         <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} />
         <Footer />
       </InlineForm>
+      {showModal && (
+        <TinaModal
+          data={data}
+          close={() => {
+            setShowModal(false);
+          }}
+        />
+      )}
     </div>
   );
 };
