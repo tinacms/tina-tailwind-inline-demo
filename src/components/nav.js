@@ -5,7 +5,7 @@ export const Nav = ({ data }) => {
     <div class="text-gray-700 bg-white body-font">
       <div class="flex flex-col flex-wrap py-8 px-12 mx-auto border-b border-gray-200 md:items-center md:flex-row">
         <a
-          href="./index.html"
+          href="#"
           class="pr-2 lg:pr-8 mb-4 md:mb-0 focus:outline-none flex items-center"
         >
           <div class="inline-flex items-center">
