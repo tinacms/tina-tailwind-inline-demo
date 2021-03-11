@@ -29,7 +29,7 @@ export const Footer = ({ data, name = "" }) => {
             blocks={FOOTER_BLOCKS}
           />
         </div>
-        <div class="bg-black">
+        <div class="bg-blue-800">
           <div class="container flex flex-col flex-wrap px-5 py-6 mx-auto sm:flex-row justify-center">
             <div class="flex justify-center">
               {data.social.facebook && (
@@ -118,7 +118,7 @@ export const FooterNavBlock = ({ index, data }) => {
                 <li>
                   <a
                     href={item.link}
-                    class="text-sm text-gray-300 hover:text-white"
+                    class="text-sm text-gray-200 hover:text-white"
                   >
                     {item.label}
                   </a>

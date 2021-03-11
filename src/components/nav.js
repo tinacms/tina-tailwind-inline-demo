@@ -30,7 +30,7 @@ export const Nav = ({ data }) => {
               return (
                 <a
                   href="#"
-                  class="ml-7 text-sm font-semibold text-gray-600 hover:text-gray-800"
+                  class="ml-8 text-sm tracking-wide font-semibold text-gray-600 hover:text-blue-500"
                 >
                   {item.label}
                 </a>
