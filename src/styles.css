@@ -5,3 +5,8 @@
 details summary::-webkit-details-marker {
   display: none;
 }
+
+div[class^="ModalBody"],
+div[class*=" ModalBody"] {
+  min-height: 42vh;
+}
