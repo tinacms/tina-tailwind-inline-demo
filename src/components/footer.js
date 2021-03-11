@@ -1,4 +1,9 @@
-import { InlineGroup, InlineText } from "react-tinacms-inline";
+import {
+  InlineBlocks,
+  InlineGroup,
+  BlocksControls,
+  InlineTextarea,
+} from "react-tinacms-inline";
 
 export const Footer = ({ data, name = "" }) => {
   return (
@@ -17,112 +22,12 @@ export const Footer = ({ data, name = "" }) => {
               </h2>
             </a>
           </div>
-          <div class="flex flex-wrap flex-grow mt-8 -mb-10 text-left md:pl-20 md:mt-0 ">
-            <div class="w-full px-4 lg:w-1/3 md:w-1/2">
-              <h1 class="mb-3 text-sm font-semibold tracking-widest text-blue-400 uppercase title-font">
-                Product
-              </h1>
-              <nav class="mb-10 list-none">
-                <li>
-                  <a href="#" class="text-sm text-gray-300 hover:text-white">
-                    Email Templates
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-gray-300 hover:text-white">
-                    Web Templates
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-gray-300 hover:text-white">
-                    Figma Files
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-gray-300 hover:text-white">
-                    Sketch Files
-                  </a>
-                </li>
-              </nav>
-            </div>
-            <div class="w-full px-4 lg:w-1/3 md:w-1/2">
-              <h1 class="mb-3 text-sm font-semibold tracking-widest text-blue-400 uppercase title-font">
-                Company
-              </h1>
-              <nav class="mb-10 list-none">
-                <li>
-                  <a href="#" class="text-sm text-gray-300 hover:text-white">
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-gray-300 hover:text-white">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-gray-300 hover:text-white">
-                    Carriers
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-gray-300 hover:text-white">
-                    Pricing
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-gray-300 hover:text-white">
-                    {" "}
-                    Security
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-gray-300 hover:text-white">
-                    {" "}
-                    Contact Us
-                  </a>
-                </li>
-              </nav>
-            </div>
-            <div class="w-full px-4 lg:w-1/3 md:w-1/2">
-              <h1 class="mb-3 text-sm font-semibold tracking-widest text-blue-400 uppercase title-font">
-                Legal
-              </h1>
-              <nav class="mb-10 list-none">
-                <li>
-                  <a href="#" class="text-sm text-gray-300 hover:text-white">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-gray-300 hover:text-white">
-                    Terms Of Service
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-gray-300 hover:text-white">
-                    Trademark Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-gray-300 hover:text-white">
-                    Inactivity Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-gray-300 hover:text-white">
-                    {" "}
-                    DPA
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="text-sm text-gray-300 hover:text-white">
-                    SLA
-                  </a>
-                </li>
-              </nav>
-            </div>
-          </div>
+          <InlineBlocks
+            direction="horizontal"
+            className="flex flex-wrap flex-grow mt-8 -mb-10 text-left md:pl-20 md:mt-0"
+            name="navlist"
+            blocks={FOOTER_BLOCKS}
+          />
         </div>
         <div class="bg-black">
           <div class="container flex flex-col flex-wrap px-5 py-6 mx-auto sm:flex-row justify-center">
@@ -195,7 +100,111 @@ export const Footer = ({ data, name = "" }) => {
   );
 };
 
+export const FooterNavBlock = ({ index, data }) => {
+  return (
+    <div class="w-full px-4 lg:w-1/3 md:w-1/2">
+      <BlocksControls
+        index={index}
+        focusRing={{ offset: 16 }}
+        insetControls={false}
+      >
+        <h3 class="mb-3 text-sm font-semibold tracking-widest text-blue-400 uppercase title-font">
+          <InlineTextarea name="title" />
+        </h3>
+        <nav class="mb-10 list-none">
+          {data.items &&
+            data.items.map(function (item, index) {
+              return (
+                <li>
+                  <a
+                    href={item.link}
+                    class="text-sm text-gray-300 hover:text-white"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              );
+            })}
+        </nav>
+      </BlocksControls>
+    </div>
+  );
+};
+
+export const footer_nav_template = {
+  label: "Footer Nav",
+  defaultItem: {
+    title: "Product",
+    items: [
+      {
+        label: "Form Templates",
+        link: "#",
+      },
+      {
+        label: "Landing Page",
+        link: "#",
+      },
+      {
+        label: "Figma Files",
+        link: "#",
+      },
+      {
+        label: "Background Info",
+        link: "#",
+      },
+    ],
+  },
+  itemProps: (item) => ({
+    label: item.title,
+  }),
+  fields: [
+    {
+      name: "title",
+      label: "Title",
+      component: "text",
+    },
+    {
+      name: "items",
+      label: "Nav Items",
+      component: "group-list",
+      itemProps: (item) => ({
+        label: item.label,
+      }),
+      fields: [
+        {
+          name: "label",
+          label: "Label",
+          component: "text",
+        },
+        {
+          name: "link",
+          label: "Link",
+          component: "text",
+        },
+      ],
+    },
+  ],
+};
+
+const FOOTER_BLOCKS = {
+  nav: {
+    Component: FooterNavBlock,
+    template: footer_nav_template,
+  },
+};
+
 export const FOOTER_FIELDS = [
+  {
+    label: "Nav List",
+    name: "navlist",
+    component: "blocks",
+    itemProps: (item) => ({
+      label: item.title,
+    }),
+    templates: {
+      nav: footer_nav_template,
+    },
+  },
   {
     name: "social",
     label: "Social Media",

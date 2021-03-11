@@ -1,0 +1,158 @@
+{
+  "nav": {
+    "name": "Company Name",
+    "items": [
+      {
+        "label": "Pricing",
+        "link": "/"
+      },
+      {
+        "label": "Contact",
+        "link": "/"
+      },
+      {
+        "label": "Services",
+        "link": "/"
+      }
+    ]
+  },
+  "blocks": [
+    {
+      "_template": "hero",
+      "tagline": "TAGLINE ABOVE TEXT",
+      "headline": "This is a large display heading.",
+      "text": "Deploy your mvp in minutes, not days. WT offers you a a wide selection swapable sections for your landing page.",
+      "image": {
+        "src": "https://source.unsplash.com/collection/300768/720x500",
+        "alt": "Photo from Unsplash"
+      },
+      "actions": [
+        {
+          "label": "Primary Action",
+          "type": "button"
+        },
+        {
+          "label": "Learn More",
+          "type": "link"
+        }
+      ]
+    },
+    {
+      "_template": "features",
+      "items": [
+        {
+          "_template": "feature",
+          "title": "Amazing Feature",
+          "text": "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
+          "actions": [
+            {
+              "label": "Learn More",
+              "type": "link"
+            }
+          ]
+        },
+        {
+          "_template": "feature",
+          "title": "Another Great Thing",
+          "text": "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
+          "actions": [
+            {
+              "label": "Learn More",
+              "type": "link"
+            }
+          ]
+        },
+        {
+          "_template": "feature",
+          "title": "Three To Round It Out",
+          "text": "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
+          "actions": [
+            {
+              "label": "Learn More",
+              "type": "link"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "social": {
+      "facebook": "/",
+      "twitter": "/",
+      "instagram": "/"
+    },
+    "navlist": [
+      {
+        "_template": "nav",
+        "title": "Product",
+        "items": [
+          {
+            "label": "Form Templates",
+            "link": "#"
+          },
+          {
+            "label": "Landing Page",
+            "link": "#"
+          },
+          {
+            "label": "Figma Files",
+            "link": "#"
+          },
+          {
+            "label": "Background Info",
+            "link": "#"
+          }
+        ]
+      },
+      {
+        "_template": "nav",
+        "title": "Company",
+        "items": [
+          {
+            "label": "About",
+            "link": "#"
+          },
+          {
+            "label": "Carriers",
+            "link": "#"
+          },
+          {
+            "label": "Pricing",
+            "link": "#"
+          },
+          {
+            "label": "Security",
+            "link": "#"
+          },
+          {
+            "label": "Contact Us",
+            "link": "#"
+          }
+        ]
+      },
+      {
+        "_template": "nav",
+        "title": "Legal",
+        "items": [
+          {
+            "label": "Privacy Policy",
+            "link": "#"
+          },
+          {
+            "label": "Terms Of Service",
+            "link": "#"
+          },
+          {
+            "label": "Trademark Policy",
+            "link": "#"
+          },
+          {
+            "label": "Inactivity Policy",
+            "link": "#"
+          }
+        ]
+      }
+    ]
+  }
+}

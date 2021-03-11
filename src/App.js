@@ -7,6 +7,7 @@ import { Nav } from "./components/nav";
 import { Footer } from "./components/footer";
 import { FeaturesBlock, features_template } from "./components/features";
 import { TinaModal } from "./components/modal";
+import HomeData from "./home.json";
 
 const App = () => {
   const cms = useCMS();
@@ -18,96 +19,7 @@ const App = () => {
   const [showModal, setShowModal] = React.useState(false);
   // create a Tina form
   const [data, form] = useForm({
-    initialValues: {
-      nav: {
-        name: "Company Name",
-        items: [
-          {
-            label: "Pricing",
-            link: "/",
-          },
-          {
-            label: "Contact",
-            link: "/",
-          },
-          {
-            label: "Services",
-            link: "/",
-          },
-        ],
-      },
-      blocks: [
-        {
-          _template: "hero",
-          tagline: "TAGLINE ABOVE TEXT",
-          headline: "This is a large display heading.",
-          text:
-            "Deploy your mvp in minutes, not days. WT offers you a a wide selection swapable sections for your landing page.",
-          image: {
-            src: "https://source.unsplash.com/collection/300768/720x500",
-            alt: "Photo from Unsplash",
-          },
-          actions: [
-            {
-              label: "Primary Action",
-              type: "button",
-            },
-            {
-              label: "Learn More",
-              type: "link",
-            },
-          ],
-        },
-        {
-          _template: "features",
-          items: [
-            {
-              _template: "feature",
-              title: "Amazing Feature",
-              text:
-                "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
-              actions: [
-                {
-                  label: "Learn More",
-                  type: "link",
-                },
-              ],
-            },
-            {
-              _template: "feature",
-              title: "Another Great Thing",
-              text:
-                "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
-              actions: [
-                {
-                  label: "Learn More",
-                  type: "link",
-                },
-              ],
-            },
-            {
-              _template: "feature",
-              title: "Three To Round It Out",
-              text:
-                "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
-              actions: [
-                {
-                  label: "Learn More",
-                  type: "link",
-                },
-              ],
-            },
-          ],
-        },
-      ],
-      footer: {
-        social: {
-          facebook: "/",
-          twitter: "/",
-          instagram: "/",
-        },
-      },
-    },
+    initialValues: HomeData,
     fields: [],
     onSubmit: (values) => {
       setShowModal(true);
