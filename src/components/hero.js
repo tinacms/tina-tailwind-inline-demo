@@ -10,13 +10,13 @@ export const Hero = ({ data }) => {
     <section class="text-gray-700  body-font">
       <div class="container flex flex-col items-center px-8 py-24 mx-auto md:flex-row">
         <div class="flex flex-col    w-full pt-0 mb-16 text-left lg:flex-grow md:w-1/2 lg:w-3/5 md:pr-24 md:items-start md:mb-0 ">
-          <h2 class="w-full	mb-4 text-sm font-bold tracking-wide text-black title-font">
+          <h2 class="w-full	mb-3 text-md font-bold tracking-wide text-black title-font">
             <InlineTextarea name="tagline" />
           </h2>
-          <h1 class="w-full	mb-6 text-2xl font-bold tracking-tight text-blue-500 text-left lg:text-5xl title-font">
+          <h3 class="w-full	mb-6 text-4xl font-bold tracking-tight text-blue-500 text-left lg:text-5xl title-font">
             <InlineTextarea name="headline" />
-          </h1>
-          <p class="w-full	mb-8 text-base leading-relaxed text-gray-700 text-left lg:text-1xl">
+          </h3>
+          <p class="w-full	mb-8 text-base leading-relaxed text-gray-700 text-left text-lg lg:text-xl">
             <InlineTextarea name="text" />
           </p>
           <Actions actions={data.actions} />
@@ -71,7 +71,7 @@ export const hero_template = {
     tagline: "TAGLINE ABOVE TEXT",
     headline: "This is a large display heading.",
     text:
-      "Deploy your mvp in minutes, not days. WT offers you a a wide selection swapable sections for your landing page.",
+      "Give your team a contextual, intuitive editing experience without sacrificing code quality.",
     image: {
       src: "https://source.unsplash.com/collection/300768/720x500",
       alt: "Photo from Unsplash",

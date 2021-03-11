@@ -1,3 +1,3 @@
-# Basic Inline Tina Demo
+# Tina Inline Demo
 
-Tailwind CSS blocks courtesy of [wickedblocks.com](https://blocks.wickedtemplates.com/)
+A simple Tina demo built with Tailwind CSS.

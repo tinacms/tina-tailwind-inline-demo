@@ -26,9 +26,9 @@ export const FeatureBlock = ({ index, data }) => {
             <path d="M21 3a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h18zM11 13H4v6h7v-6zm9 0h-7v6h7v-6zm-9-8H4v6h7V5zm9 0h-7v6h7V5z" />
           </svg>
         </div>
-        <h2 class="mb-3 text-lg font-semibold text-gray-700 lg:text-2xl title-font">
+        <h3 class="mb-3 text-lg font-semibold text-gray-700 lg:text-2xl title-font">
           <InlineTextarea name="title" />
-        </h2>
+        </h3>
         <p class="mb-4 text-base leading-relaxed">
           <InlineTextarea name="text" />
         </p>
@@ -43,7 +43,7 @@ export const feature_template = {
   defaultItem: {
     title: "Feature Heading Text",
     text:
-      "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
+      "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. ",
     actions: [
       {
         label: "Learn More",
@@ -104,7 +104,7 @@ export const features_template = {
         _template: "feature",
         title: "Longer Information 1",
         text:
-          "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
+          "By eleven o'clock the next day we were well upon our way to the old English capital.",
         actions: [
           {
             label: "Learn More",
@@ -116,7 +116,7 @@ export const features_template = {
         _template: "feature",
         title: "Longer Information 2",
         text:
-          "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
+          "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. ",
         actions: [
           {
             label: "Learn More",
@@ -128,7 +128,7 @@ export const features_template = {
         _template: "feature",
         title: "Longer Information 3",
         text:
-          "Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.",
+          "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. ",
         actions: [
           {
             label: "Learn More",

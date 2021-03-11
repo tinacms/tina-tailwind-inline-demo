@@ -15,7 +15,7 @@ export const Actions = ({ actions }) => {
               let element = null;
               if (action.type === "button") {
                 element = (
-                  <button class="flex items-center px-8 py-3 mx-3 mt-auto font-semibold text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 whitespace-nowrap">
+                  <button class="flex items-center px-7 py-3 mx-3 mt-auto font-semibold text-lg text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 whitespace-nowrap">
                     {action.label}
                   </button>
                 );
@@ -24,7 +24,7 @@ export const Actions = ({ actions }) => {
                 element = (
                   <a
                     href="#"
-                    class="inline-flex items-center font-semibold mx-3 text-blue-600 hover:text-blue-400 "
+                    class="inline-flex items-center font-semibold mx-3 text-lg text-blue-600 hover:text-blue-400 "
                   >
                     {action.label}
                     <svg

@@ -7,7 +7,7 @@ import {
 
 export const Footer = ({ data, name = "" }) => {
   return (
-    <footer class="text-white bg-gray-700 border-t body-font">
+    <footer class="text-white bg-gray-700 body-font">
       <InlineGroup
         name="footer"
         focusRing={{ offset: -16 }}
