@@ -7,7 +7,7 @@ import { ACTION_FIELDS, Actions } from "./actions";
 
 export const FeatureBlock = ({ index, data }) => {
   return (
-    <div class="px-8 py-6 lg:w-1/3 md:w-full">
+    <div class="px-8 py-6 lg:w-1/2 xl:w-1/3 w-full">
       <BlocksControls
         index={index}
         focusRing={{ offset: 16 }}
