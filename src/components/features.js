@@ -13,7 +13,9 @@ export const FeatureBlock = ({ index, data }) => {
         focusRing={{ offset: 16 }}
         insetControls={false}
       >
-        <div class="inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mb-5 mr-3 text-gray-50 bg-blue-400 rounded-full">
+        <div
+          class={`inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mb-5 mr-3 text-gray-50 bg-${data.color}-400 rounded-full`}
+        >
           <svg
             class="w-6 h-6"
             xmlns="http://www.w3.org/2000/svg"
@@ -41,6 +43,7 @@ export const FeatureBlock = ({ index, data }) => {
 export const feature_template = {
   label: "Feature",
   defaultItem: {
+    color: "blue",
     title: "Feature Heading Text",
     text:
       "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. ",
@@ -64,6 +67,37 @@ export const feature_template = {
       name: "text",
       label: "Text",
       component: "text",
+    },
+    {
+      name: "color",
+      label: "Color",
+      component: "select",
+      options: [
+        {
+          label: "Blue",
+          value: "blue",
+        },
+        {
+          label: "Pink",
+          value: "pink",
+        },
+        {
+          label: "Green",
+          value: "green",
+        },
+        {
+          label: "Red",
+          value: "red",
+        },
+        {
+          label: "Purple",
+          value: "purple",
+        },
+        {
+          label: "Yellow",
+          value: "yellow",
+        },
+      ],
     },
     ...ACTION_FIELDS,
   ],

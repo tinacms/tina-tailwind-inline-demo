@@ -42,6 +42,7 @@
       "items": [
         {
           "_template": "feature",
+          "color": "green",
           "title": "Amazing Feature",
           "text": "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. ",
           "actions": [
@@ -53,6 +54,7 @@
         },
         {
           "_template": "feature",
+          "color": "red",
           "title": "Another Great Thing",
           "text": "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. ",
           "actions": [
@@ -64,6 +66,7 @@
         },
         {
           "_template": "feature",
+          "color": "yellow",
           "title": "Three To Round It Out",
           "text": "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. ",
           "actions": [
