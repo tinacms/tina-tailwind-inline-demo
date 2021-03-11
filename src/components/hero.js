@@ -52,6 +52,19 @@ export function HeroBlock({ data, index }) {
   );
 }
 
+export const IMAGE_FIELDS = [
+  {
+    name: "src",
+    label: "Image Source",
+    component: "text",
+  },
+  {
+    name: "alt",
+    label: "Alt Text",
+    component: "text",
+  },
+];
+
 export const hero_template = {
   label: "Hero",
   defaultItem: {
@@ -96,20 +109,6 @@ export const hero_template = {
       component: "group",
       fields: IMAGE_FIELDS,
     },
-    ,
     ...ACTION_FIELDS,
   ],
 };
-
-export const IMAGE_FIELDS = [
-  {
-    name: "src",
-    label: "Image Source",
-    component: "text",
-  },
-  {
-    name: "alt",
-    label: "Alt Text",
-    component: "text",
-  },
-];
