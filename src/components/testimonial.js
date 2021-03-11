@@ -1,27 +1,31 @@
-import { BlocksControls } from "react-tinacms-inline";
+import {
+  BlocksControls,
+  InlineText,
+  InlineTextarea,
+} from "react-tinacms-inline";
 
 export const Testimonial = () => {
   return (
-    <section class="py-12 bg-blue-800 md:py-20 lg:py-24">
+    <section class="py-24 bg-blue-800">
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="relative">
-          <blockquote class="mt-10">
-            <div class="max-w-3xl mx-auto text-center text-3xl leading-9 font-medium text-gray-100">
-              <p>
-                <span class="text-black text-blue-500">&ldquo;</span>
-                There are only two hard things in Computer Science: cache
-                invalidation and naming things.
-                <span class="text-black text-blue-500">&rdquo;</span>
+          <blockquote>
+            <div class="relative z-10 max-w-3xl mx-auto text-center text-3xl leading-9 font-medium text-gray-100">
+              <span class="block text-black text-blue-700 text-8xl absolute inset-y-1/2 transform translate-y-2	-left-4 leading-4 -z-1">
+                &ldquo;
+              </span>
+              <p class="relative">
+                <InlineTextarea name="quote" />
               </p>
+              <span class="block text-black text-blue-700 text-8xl absolute inset-y-1/2 transform translate-y-3	-right-4 leading-4 -z-1">
+                &rdquo;
+              </span>
             </div>
-            <footer class="mt-8">
-              <div class="md:flex md:items-center md:justify-center">
-                <div class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
-                  <div class="tracking-wide text-black title-font text-blue-300">
-                    <span className="text-blue-500 mr-2">—</span>Phil Karlton
-                  </div>
-                </div>
-              </div>
+            <footer class="mt-4 text-center">
+              <div className="text-blue-700 mb-4 flex-grow-0">—</div>
+              <p class="tracking-wide text-black title-font text-blue-300">
+                <InlineTextarea name="author" />
+              </p>
             </footer>
           </blockquote>
         </div>
@@ -44,6 +48,10 @@ export function TestimonialBlock({ data, index }) {
 
 export const testimonial_template = {
   label: "Testimonial",
-  defaultItem: {},
+  defaultItem: {
+    quote:
+      "There are only two hard things in Computer Science: cache invalidation and naming things.",
+    author: "Phil Karlton",
+  },
   fields: [],
 };
