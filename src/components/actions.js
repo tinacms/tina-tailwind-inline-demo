@@ -15,7 +15,7 @@ export const Actions = ({ actions }) => {
               let element = null;
               if (action.type === "button") {
                 element = (
-                  <button class="flex items-center px-7 py-3 mx-3 mt-auto font-semibold text-lg text-white transition duration-500 ease-in-out transform bg-black rounded-lg hover:bg-gray-800 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 whitespace-nowrap">
+                  <button class="flex items-center px-7 py-3 mx-3 mt-auto font-semibold text-lg text-white transition duration-500 ease-in-out transform bg-gray-800 rounded-lg hover:bg-gray-600 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 whitespace-nowrap">
                     {action.label}
                   </button>
                 );

@@ -105,7 +105,7 @@ export const feature_template = {
 
 export const Features = ({ data }) => {
   return (
-    <section class="text-gray-700 body-font bg-gray-50">
+    <section class="text-gray-700 body-font bg-gray-50 border-b border-t border-gray-100">
       <div class="container py-24 mx-auto">
         <InlineBlocks
           direction="horizontal"
