@@ -139,6 +139,8 @@ export const features_template = {
         title: "Longer Information 1",
         text:
           "By eleven o'clock the next day we were well upon our way to the old English capital.",
+
+        color: "green",
         actions: [
           {
             label: "Learn More",
@@ -151,6 +153,8 @@ export const features_template = {
         title: "Longer Information 2",
         text:
           "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. ",
+
+        color: "red",
         actions: [
           {
             label: "Learn More",
@@ -163,6 +167,8 @@ export const features_template = {
         title: "Longer Information 3",
         text:
           "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. ",
+
+        color: "yellow",
         actions: [
           {
             label: "Learn More",
