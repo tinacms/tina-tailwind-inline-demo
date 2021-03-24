@@ -3,8 +3,8 @@ import {
   InlineTextarea,
   InlineBlocks,
 } from "react-tinacms-inline";
-import { Icon } from "./icon";
-import { ACTION_FIELDS, Actions } from "./actions";
+import { Icon, ICON_FIELDS } from "./icon";
+import { Actions, ACTION_FIELDS } from "./actions";
 
 export const FeatureBlock = ({ index, data }) => {
   return (
@@ -14,10 +14,8 @@ export const FeatureBlock = ({ index, data }) => {
         focusRing={{ offset: 16 }}
         insetControls={false}
       >
-        <div
-          class={`inline-flex items-center justify-center flex-shrink-0 w-12 h-12 mb-5 mr-3 text-gray-50 bg-${data.icon.color}-400 rounded-full`}
-        >
-          <Icon name={data.icon.name} />
+        <div class={`mb-5`}>
+          <Icon icon={data.icon} />
         </div>
         <h3 class="mb-3 text-lg font-semibold text-gray-700 lg:text-2xl title-font">
           <InlineTextarea name="title" />
@@ -37,6 +35,7 @@ export const feature_template = {
     icon: {
       color: "blue",
       name: "",
+      style: "circle",
     },
     title: "Feature Heading Text",
     text:
@@ -52,127 +51,7 @@ export const feature_template = {
     label: item.title,
   }),
   fields: [
-    {
-      name: "icon",
-      label: "Icon",
-      component: "group",
-      fields: [
-        {
-          name: "color",
-          label: "Color",
-          component: "select",
-          options: [
-            {
-              label: "Blue",
-              value: "blue",
-            },
-            {
-              label: "Pink",
-              value: "pink",
-            },
-            {
-              label: "Green",
-              value: "green",
-            },
-            {
-              label: "Red",
-              value: "red",
-            },
-            {
-              label: "Purple",
-              value: "purple",
-            },
-            {
-              label: "Yellow",
-              value: "yellow",
-            },
-          ],
-        },
-        {
-          name: "name",
-          label: "Icon",
-          component: "select",
-          options: [
-            {
-              label: "Random",
-              value: "",
-            },
-            {
-              label: "Code Block",
-              value: "BiCodeBlock",
-            },
-            {
-              label: "Like",
-              value: "BiLike",
-            },
-            {
-              label: "Map",
-              value: "BiMapAlt",
-            },
-            {
-              label: "Palette",
-              value: "BiPalette",
-            },
-            {
-              label: "Pie Chart",
-              value: "BiPieChartAlt2",
-            },
-            {
-              label: "Pin",
-              value: "BiPin",
-            },
-            {
-              label: "Shield",
-              value: "BiShield",
-            },
-            {
-              label: "Setting Sliders",
-              value: "BiSlider",
-            },
-            {
-              label: "Store",
-              value: "BiStore",
-            },
-            {
-              label: "Tennis Ball",
-              value: "BiTennisBall",
-            },
-            {
-              label: "Test Tube",
-              value: "BiTestTube",
-            },
-            {
-              label: "Trophy",
-              value: "BiTrophy",
-            },
-            {
-              label: "User",
-              value: "BiUserCircle",
-            },
-            {
-              label: "Beer",
-              value: "BiBeer",
-            },
-            {
-              label: "Chat",
-              value: "BiChat",
-            },
-            {
-              label: "Cloud",
-              value: "BiCloud",
-            },
-            {
-              label: "Coffee",
-              value: "BiCoffeeTogo",
-            },
-            {
-              label: "World",
-              value: "BiWorld",
-            },
-          ],
-        },
-      ],
-    },
+    ...ICON_FIELDS,
     {
       name: "title",
       label: "Title",
@@ -223,6 +102,7 @@ export const features_template = {
         icon: {
           color: "green",
           name: "BiTrophy",
+          style: "circle",
         },
         title: "Longer Information 1",
         text:
@@ -239,6 +119,7 @@ export const features_template = {
         icon: {
           color: "red",
           name: "BiPieChartAlt2",
+          style: "circle",
         },
         title: "Longer Information 2",
         text:
@@ -255,6 +136,7 @@ export const features_template = {
         icon: {
           color: "yellow",
           name: "BiMapAlt",
+          style: "circle",
         },
         title: "Longer Information 3",
         text:

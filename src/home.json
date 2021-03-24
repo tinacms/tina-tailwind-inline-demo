@@ -44,7 +44,8 @@
           "_template": "feature",
           "icon": {
             "color": "green",
-            "name": "BiCoffeeTogo"
+            "name": "BiCoffeeTogo",
+            "style": "circle"
           },
           "title": "Amazing Feature",
           "text": "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. ",
@@ -59,7 +60,8 @@
           "_template": "feature",
           "icon": {
             "color": "red",
-            "name": "BiCloud"
+            "name": "BiCloud",
+            "style": "circle"
           },
           "title": "Another Great Thing",
           "text": "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. ",
@@ -74,7 +76,8 @@
           "_template": "feature",
           "icon": {
             "color": "yellow",
-            "name": "BiMapAlt"
+            "name": "BiMapAlt",
+            "style": "circle"
           },
           "title": "Three To Round It Out",
           "text": "Connect to any data source, edit with Tina. Designed for the Jamstack with a focus on React-based sites. ",
