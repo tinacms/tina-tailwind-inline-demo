@@ -11,6 +11,7 @@ import { Nav } from "./components/nav";
 import { Footer } from "./components/footer";
 import { FeaturesBlock, features_template } from "./components/features";
 import { TinaModal } from "./components/modal";
+import { Theme } from "./components/theme";
 import HomeData from "./home.json";
 
 const App = () => {
@@ -21,7 +22,7 @@ const App = () => {
   });
 
   const [showModal, setShowModal] = React.useState(false);
-  // create a Tina form
+
   const [data, form] = useForm({
     initialValues: HomeData,
     fields: [],
@@ -30,16 +31,16 @@ const App = () => {
     },
   });
 
-  // register the Tina form so it appears in the sidebar
   usePlugin(form);
 
-  // use `data` in your render to access form-mutated values
   return (
     <div className="App">
       <InlineForm form={form}>
-        <Nav data={data.nav} />
-        <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} />
-        <Footer name={data.nav.name} data={data.footer} />
+        <Theme>
+          <Nav data={data.nav} />
+          <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} />
+          <Footer name={data.nav.name} data={data.footer} />
+        </Theme>
       </InlineForm>
       {showModal && (
         <TinaModal

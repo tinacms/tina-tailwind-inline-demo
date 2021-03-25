@@ -1,6 +1,10 @@
+import * as React from "react";
+import { ThemeContext } from "./theme";
 import { InlineGroup } from "react-tinacms-inline";
 
 export const Actions = ({ actions }) => {
+  const theme = React.useContext(ThemeContext);
+
   return (
     <div class="w-full">
       <InlineGroup
@@ -24,7 +28,7 @@ export const Actions = ({ actions }) => {
                 element = (
                   <a
                     href="#"
-                    class="inline-flex items-center font-semibold mx-3 text-lg text-blue-600 hover:text-blue-400 "
+                    class={`inline-flex items-center font-semibold mx-3 text-lg text-${theme.color}-600 hover:text-${theme.color}-400`}
                   >
                     {action.label}
                     <svg

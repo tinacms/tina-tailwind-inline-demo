@@ -1,3 +1,5 @@
+import * as React from "react";
+import { ThemeContext } from "./theme";
 import {
   InlineGroup,
   BlocksControls,
@@ -6,6 +8,8 @@ import {
 import { ACTION_FIELDS, Actions } from "./actions";
 
 export const Hero = ({ data }) => {
+  const theme = React.useContext(ThemeContext);
+
   return (
     <section class="text-gray-700  body-font">
       <div class="container flex flex-col items-center px-8 py-24 mx-auto md:flex-row">
@@ -13,7 +17,9 @@ export const Hero = ({ data }) => {
           <h2 class="w-full	mb-3 text-md font-bold tracking-wide text-black title-font">
             <InlineTextarea name="tagline" />
           </h2>
-          <h3 class="w-full	mb-6 text-4xl font-bold tracking-tight text-blue-500 text-left lg:text-5xl title-font">
+          <h3
+            class={`w-full	mb-6 text-4xl font-bold tracking-tight text-${theme.color}-500 text-left lg:text-5xl title-font`}
+          >
             <InlineTextarea name="headline" />
           </h3>
           <p class="w-full	mb-8 text-base leading-relaxed text-gray-700 text-left text-lg lg:text-xl">

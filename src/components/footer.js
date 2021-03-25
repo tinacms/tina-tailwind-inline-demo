@@ -1,3 +1,5 @@
+import * as React from "react";
+import { ThemeContext } from "./theme";
 import {
   InlineBlocks,
   InlineGroup,
@@ -6,6 +8,8 @@ import {
 } from "react-tinacms-inline";
 
 export const Footer = ({ data, name = "" }) => {
+  const theme = React.useContext(ThemeContext);
+
   return (
     <footer class="text-white bg-gray-700 body-font">
       <InlineGroup
@@ -35,7 +39,7 @@ export const Footer = ({ data, name = "" }) => {
               {data.social.facebook && (
                 <a
                   href={data.social.facebook}
-                  class="text-white hover:text-blue-500"
+                  class={`text-white hover:text-${theme.color}-500`}
                 >
                   <svg
                     fill="currentColor"
@@ -52,7 +56,7 @@ export const Footer = ({ data, name = "" }) => {
               {data.social.twitter && (
                 <a
                   href={data.social.twitter}
-                  class="ml-4 text-white hover:text-blue-500"
+                  class={`ml-4 text-white hover:text-${theme.color}-500`}
                 >
                   <svg
                     fill="currentColor"
@@ -69,7 +73,7 @@ export const Footer = ({ data, name = "" }) => {
               {data.social.instagram && (
                 <a
                   href={data.social.instagram}
-                  class="ml-4 text-white hover:text-blue-500"
+                  class={`ml-4 text-white hover:text-${theme.color}-500`}
                 >
                   <svg
                     fill="none"
@@ -101,6 +105,8 @@ export const Footer = ({ data, name = "" }) => {
 };
 
 export const FooterNavBlock = ({ index, data }) => {
+  const theme = React.useContext(ThemeContext);
+
   return (
     <div class="w-full px-4 lg:w-1/3 md:w-1/2">
       <BlocksControls
@@ -108,7 +114,9 @@ export const FooterNavBlock = ({ index, data }) => {
         focusRing={{ offset: 16 }}
         insetControls={false}
       >
-        <h3 class="mb-3 text-sm font-semibold tracking-widest text-blue-400 uppercase title-font">
+        <h3
+          class={`mb-3 text-sm font-semibold tracking-widest text-${theme.color}-400 uppercase title-font`}
+        >
           <InlineTextarea name="title" />
         </h3>
         <nav class="mb-10 list-none">
