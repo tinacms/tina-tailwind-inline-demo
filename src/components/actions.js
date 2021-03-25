@@ -14,14 +14,14 @@ export const Actions = ({ actions }) => {
         insetControls={true}
         fields={ACTION_FIELDS}
       >
-        <div class="flex flex-wrap items-center -mx-3">
+        <div class="flex flex-wrap items-center -mx-3 -my-2">
           {actions &&
             actions.map(function (action, index) {
               let element = null;
               if (action.type === "button") {
                 element = (
                   <button
-                    class={`flex items-center px-7 py-3 mx-3 mt-auto font-semibold text-lg text-white transition duration-500 ease-in-out ${
+                    class={`flex items-center px-7 py-3 mx-3 my-2 font-semibold text-lg text-white transition duration-500 ease-in-out ${
                       theme.button.style === "rounded" && `rounded-lg`
                     } ${
                       theme.button.style === "round" && `rounded-full`
@@ -40,7 +40,7 @@ export const Actions = ({ actions }) => {
                 element = (
                   <a
                     href="#"
-                    class={`inline-flex items-center font-semibold mx-3 text-lg text-${theme.color}-600 hover:text-${theme.color}-400`}
+                    class={`inline-flex items-center font-semibold mx-3 my-2 text-lg text-${theme.color}-600 hover:text-${theme.color}-400`}
                   >
                     {action.label}
                     <BiRightArrowAlt
