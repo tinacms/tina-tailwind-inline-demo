@@ -21,7 +21,13 @@ export const Actions = ({ actions }) => {
               if (action.type === "button") {
                 element = (
                   <button
-                    class={`flex items-center px-7 py-3 mx-3 mt-auto font-semibold text-lg text-white transition duration-500 ease-in-out rounded-lg transform bg-${theme.color}-500 hover:bg-${theme.color}-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 whitespace-nowrap`}
+                    class={`flex items-center px-7 py-3 mx-3 mt-auto font-semibold text-lg text-white transition duration-500 ease-in-out ${
+                      theme.button.style === "rounded" && `rounded-lg`
+                    } ${
+                      theme.button.style === "round" && `rounded-full`
+                    } transform bg-${theme.color}-500 hover:bg-${
+                      theme.color
+                    }-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 whitespace-nowrap`}
                   >
                     {action.label}
                     <BiRightArrowAlt

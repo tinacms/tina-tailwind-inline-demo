@@ -40,6 +40,25 @@ export const Theme = ({ children }) => {
           },
         ],
       },
+      {
+        name: "button.style",
+        label: "Button Style",
+        component: "select",
+        options: [
+          {
+            label: "Rounded Full",
+            value: "round",
+          },
+          {
+            label: "Rounded Partial",
+            value: "rounded",
+          },
+          {
+            label: "Square",
+            value: "square",
+          },
+        ],
+      },
     ],
     onSubmit: (values) => {},
   });

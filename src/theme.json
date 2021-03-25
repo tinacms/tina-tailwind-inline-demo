@@ -1,3 +1,6 @@
 {
-  "color": "blue"
+  "color": "blue",
+  "button": {
+    "style": "rounded"
+  }
 }
