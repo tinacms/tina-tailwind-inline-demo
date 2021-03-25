@@ -14,7 +14,7 @@ export const Hero = ({ data }) => {
     <section class="text-gray-700  body-font">
       <div class="container flex flex-col items-center px-8 py-24 mx-auto md:flex-row">
         <div class="flex flex-col    w-full pt-0 mb-16 text-left lg:flex-grow md:w-1/2 lg:w-3/5 md:pr-24 md:items-start md:mb-0 ">
-          <h2 class="w-full	mb-3 text-md font-bold tracking-wide text-black title-font">
+          <h2 class="w-full	mb-4 text-md font-bold tracking-wide text-black title-font">
             <InlineTextarea name="tagline" />
           </h2>
           <h3
@@ -22,7 +22,7 @@ export const Hero = ({ data }) => {
           >
             <InlineTextarea name="headline" />
           </h3>
-          <p class="w-full	mb-8 text-base leading-relaxed text-gray-700 text-left text-lg lg:text-xl">
+          <p class="w-full	mb-8 text-base  text-gray-700 text-left text-lg leading-relaxed lg:text-xl lg:leading-relaxed">
             <InlineTextarea name="text" />
           </p>
           <Actions actions={data.actions} />
