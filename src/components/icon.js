@@ -52,7 +52,7 @@ export const Icon = ({ icon }) => {
     if (icon.style == "circle") {
       return (
         <div
-          class={`inline-flex items-center justify-center flex-shrink-0 w-12 h-12 bg-${icon.color}-400 text-gray-50 rounded-full`}
+          class={`inline-flex items-center justify-center flex-shrink-0 w-12 h-12 bg-${icon.color}-400 text-${icon.color}-50 rounded-full`}
         >
           <IconSVG className={`w-8 h-8`} />
         </div>

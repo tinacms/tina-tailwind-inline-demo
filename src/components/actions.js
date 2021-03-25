@@ -1,6 +1,7 @@
 import * as React from "react";
 import { ThemeContext } from "./theme";
 import { InlineGroup } from "react-tinacms-inline";
+import { BiRightArrowAlt } from "react-icons/bi";
 
 export const Actions = ({ actions }) => {
   const theme = React.useContext(ThemeContext);
@@ -19,8 +20,13 @@ export const Actions = ({ actions }) => {
               let element = null;
               if (action.type === "button") {
                 element = (
-                  <button class="flex items-center px-7 py-3 mx-3 mt-auto font-semibold text-lg text-white transition duration-500 ease-in-out transform bg-gray-800 rounded-lg hover:bg-gray-600 hover:to-black focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 whitespace-nowrap">
+                  <button
+                    class={`flex items-center px-7 py-3 mx-3 mt-auto font-semibold text-lg text-white transition duration-500 ease-in-out rounded-lg transform bg-${theme.color}-500 hover:bg-${theme.color}-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 whitespace-nowrap`}
+                  >
                     {action.label}
+                    <BiRightArrowAlt
+                      className={`ml-1 -mr-1 w-6 h-6 text-${theme.color}-50`}
+                    />
                   </button>
                 );
               }
@@ -31,17 +37,9 @@ export const Actions = ({ actions }) => {
                     class={`inline-flex items-center font-semibold mx-3 text-lg text-${theme.color}-600 hover:text-${theme.color}-400`}
                   >
                     {action.label}
-                    <svg
-                      class="w-4 h-4 ml-2"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                    >
-                      <path fill="none" d="M0 0h24v24H0z" />
-                      <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z" />
-                    </svg>
+                    <BiRightArrowAlt
+                      className={`ml-0 mr-0 w-6 h-6 text-${theme.color}-500`}
+                    />
                   </a>
                 );
               }
