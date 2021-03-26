@@ -1,6 +1,14 @@
 {
   "nav": {
-    "name": "Company Name",
+    "wordmark": {
+      "name": "Company Name",
+      "icon": {
+        "color": "primary",
+        "name": "FiAperture",
+        "style": "float",
+        "size": "small"
+      }
+    },
     "items": [
       {
         "label": "Pricing",

@@ -21,6 +21,7 @@ import {
   BiCoffeeTogo,
   BiWorld,
 } from "react-icons/bi";
+import { FiAperture } from "react-icons/fi";
 
 const iconOptions = {
   BiCodeBlock: BiCodeBlock,
@@ -41,10 +42,12 @@ const iconOptions = {
   BiCloud: BiCloud,
   BiCoffeeTogo: BiCoffeeTogo,
   BiWorld: BiWorld,
+  FiAperture: FiAperture,
 };
 
 export const Icon = ({ icon }) => {
   const theme = React.useContext(ThemeContext);
+  const iconSize = icon.size ? (icon.size === "large" ? 14 : 9) : 14;
 
   const IconSVG = React.useMemo(() => {
     return icon.name ? iconOptions[icon.name] : randomProperty(iconOptions);
@@ -57,11 +60,16 @@ export const Icon = ({ icon }) => {
     if (icon.style == "circle") {
       return (
         <div
-          class={`relative z-10 inline-flex items-center justify-center flex-shrink-0 w-14 h-14 bg-${iconColor}-400 dark:bg-${iconColor}-500 text-${iconColor}-50 rounded-full`}
+          class={`relative z-10 inline-flex items-center justify-center flex-shrink-0 w-${iconSize} h-${iconSize} bg-${iconColor}-400 dark:bg-${iconColor}-500 text-${iconColor}-50 rounded-full`}
         >
-          <IconSVG className={`w-9 h-9`} />
+          <IconSVG
+            className={`w-${Math.max(iconSize - 5, 6)} h-${Math.max(
+              iconSize - 5,
+              6
+            )}`}
+          />
           <div
-            class={`absolute -z-1 top-2 opacity-40 left-0 w-14 h-14 bg-${iconColor}-400 dark:bg-${iconColor}-500`}
+            class={`absolute -z-1 top-2 opacity-40 left-0 w-${iconSize} h-${iconSize} bg-${iconColor}-400 dark:bg-${iconColor}-500`}
             style={{ filter: "blur(1.75rem)" }}
           ></div>
         </div>
@@ -69,7 +77,7 @@ export const Icon = ({ icon }) => {
     } else {
       return (
         <IconSVG
-          className={`w-14 h-14 text-${iconColor}-400 dark:text-${iconColor}-500`}
+          className={`w-${iconSize} h-${iconSize} text-${iconColor}-400 dark:text-${iconColor}-500`}
         />
       );
     }
@@ -144,6 +152,10 @@ export const ICON_FIELDS = [
           {
             label: "Random",
             value: "",
+          },
+          {
+            label: "Aperture",
+            value: "FiAperture",
           },
           {
             label: "Code Block",
