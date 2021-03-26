@@ -15,12 +15,12 @@ export const Hero = ({ data }) => {
     <Section variant="tint">
       <div class="w-full pt-16 lg:py-56 lg:text-left">
         <div class="px-8 pb-14 lg:pb-0 lg:w-1/2 lg:px-12">
-          <div className="max-w-2xl mx-auto">
+          <div className="max-w-3xl mx-auto">
             <h2 class="w-full	mb-4 text-md font-bold tracking-wide title-font">
               <InlineTextarea name="tagline" />
             </h2>
             <h3
-              class={`w-full relative	mb-6 text-4xl font-bold  tracking-tight text-left lg:text-5xl title-font`}
+              class={`w-full relative	mb-6 text-4xl font-extrabold tracking-normal	 text-left lg:text-5xl title-font`}
             >
               <span
                 className={`absolute z-10 pointer-events-none w-full h-full bg-clip-text text-transparent bg-gradient-to-r from-${theme.color}-400 to-${theme.color}-600`}
@@ -31,7 +31,7 @@ export const Hero = ({ data }) => {
                 <InlineTextarea name="headline" />
               </span>
             </h3>
-            <p class="w-full mb-8 text-base opacity-80 text-left text-lg leading-relaxed lg:text-xl lg:leading-relaxed">
+            <p class="w-full max-w-xl mb-8 text-base opacity-80 text-left text-lg leading-relaxed lg:text-xl lg:leading-relaxed">
               <InlineTextarea name="text" />
             </p>
             <Actions actions={data.actions} />
