@@ -44,6 +44,7 @@ export const feature_template = {
       {
         label: "Learn More",
         type: "link",
+        icon: "true",
       },
     ],
   },
@@ -111,6 +112,7 @@ export const features_template = {
           {
             label: "Learn More",
             type: "link",
+            icon: "true",
           },
         ],
       },
@@ -128,6 +130,7 @@ export const features_template = {
           {
             label: "Learn More",
             type: "link",
+            icon: "true",
           },
         ],
       },
@@ -145,6 +148,7 @@ export const features_template = {
           {
             label: "Learn More",
             type: "link",
+            icon: "true",
           },
         ],
       },

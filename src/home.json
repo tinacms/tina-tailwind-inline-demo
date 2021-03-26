@@ -29,7 +29,8 @@
       "actions": [
         {
           "label": "Primary Action",
-          "type": "button"
+          "type": "button",
+          "icon": "true"
         },
         {
           "label": "Learn More",
@@ -52,7 +53,8 @@
           "actions": [
             {
               "label": "Learn More",
-              "type": "link"
+              "type": "link",
+              "icon": "true"
             }
           ]
         },
@@ -68,7 +70,8 @@
           "actions": [
             {
               "label": "Learn More",
-              "type": "link"
+              "type": "link",
+              "icon": "true"
             }
           ]
         },
@@ -84,7 +87,8 @@
           "actions": [
             {
               "label": "Learn More",
-              "type": "link"
+              "type": "link",
+              "icon": "true"
             }
           ]
         }

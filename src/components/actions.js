@@ -30,22 +30,26 @@ export const Actions = ({ actions }) => {
                     }-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 whitespace-nowrap`}
                   >
                     {action.label}
-                    <BiRightArrowAlt
-                      className={`ml-1 -mr-1 w-6 h-6 text-${theme.color}-50`}
-                    />
+                    {action.icon && (
+                      <BiRightArrowAlt
+                        className={`ml-1 -mr-1 w-6 h-6 text-${theme.color}-50`}
+                      />
+                    )}
                   </button>
                 );
               }
-              if (action.type === "link") {
+              if (action.type === "link" || action.type === "linkExternal") {
                 element = (
                   <a
                     href="#"
                     class={`inline-flex items-center font-semibold mx-3 my-2 text-lg text-${theme.color}-600 hover:text-${theme.color}-400`}
                   >
                     {action.label}
-                    <BiRightArrowAlt
-                      className={`ml-0 mr-0 w-6 h-6 text-${theme.color}-500`}
-                    />
+                    {action.icon && (
+                      <BiRightArrowAlt
+                        className={`ml-0 mr-0 w-6 h-6 text-${theme.color}-500`}
+                      />
+                    )}
                   </a>
                 );
               }
@@ -83,6 +87,11 @@ export const ACTION_FIELDS = [
           { label: "Button", value: "button" },
           { label: "Link", value: "link" },
         ],
+      },
+      {
+        label: "Icon",
+        name: "icon",
+        component: "toggle",
       },
     ],
   },

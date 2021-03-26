@@ -86,6 +86,7 @@ export const hero_template = {
       {
         label: "Primary Action",
         type: "button",
+        icon: "true",
       },
       {
         label: "Learn More",
