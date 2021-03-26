@@ -28,6 +28,7 @@ export const Actions = ({ actions }) => {
                     } transform bg-${theme.color}-500 hover:bg-${
                       theme.color
                     }-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 whitespace-nowrap`}
+                    style={{ textShadow: "0 2px 5px rgba(0,0,0,0.1)" }}
                   >
                     {action.label}
                     {action.icon && (
