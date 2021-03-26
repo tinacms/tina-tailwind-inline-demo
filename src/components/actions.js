@@ -10,7 +10,7 @@ export const Actions = ({ actions }) => {
     <div class="w-full">
       <InlineGroup
         name=""
-        focusRing={{ offset: 16 }}
+        focusRing={{ offset: { x: 16, y: 8 } }}
         insetControls={true}
         fields={ACTION_FIELDS}
       >
