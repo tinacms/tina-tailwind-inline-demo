@@ -9,7 +9,7 @@ import { Section } from "./section";
 
 export const FeatureBlock = ({ index, data }) => {
   return (
-    <div class="px-8 py-6 lg:w-1/2 xl:w-1/3 w-full">
+    <div class="px-12 py-6 flex-grow">
       <BlocksControls
         index={index}
         focusRing={{ offset: 16 }}

@@ -19,7 +19,7 @@ export const Footer = ({ data, name = "" }) => {
         fields={FOOTER_FIELDS}
       >
         <div className="container mx-auto flex pt-3">
-          <div class="w-full flex flex-col lg:flex-row flex-wrap py-12 px-8">
+          <div class="w-full flex flex-col lg:flex-row flex-wrap py-12 px-12">
             <div class="mb-8 lg:mr-48 flex-grow-0 inline-block">
               <a class="">
                 <h2 class="text-lg font-bold tracking-tight text-white uppercase transition duration-500 ease-in-out transform hover:text-lightBlack-500">
