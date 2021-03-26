@@ -210,7 +210,8 @@ export const ICON_FIELDS = [
       {
         name: "style",
         label: "Style",
-        component: "select",
+        component: "radio-group",
+        variant: "button",
         options: [
           {
             label: "Circle",

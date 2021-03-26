@@ -82,7 +82,8 @@ export const ACTION_FIELDS = [
       {
         label: "Type",
         name: "type",
-        component: "select",
+        component: "radio-group",
+        variant: "button",
         options: [
           { label: "Button", value: "button" },
           { label: "Link", value: "link" },
