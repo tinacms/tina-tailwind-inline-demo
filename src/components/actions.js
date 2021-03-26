@@ -21,7 +21,7 @@ export const Actions = ({ actions }) => {
               if (action.type === "button") {
                 element = (
                   <button
-                    class={`flex items-center px-7 py-3 mx-3 my-2 font-semibold text-lg text-white transition duration-500 ease-in-out ${
+                    class={`z-10 relative flex items-center px-7 py-3 mx-3 my-2 font-semibold text-lg text-white transition duration-500 ease-in-out ${
                       theme.button.style === "rounded" && `rounded-lg`
                     } ${
                       theme.button.style === "round" && `rounded-full`
@@ -36,6 +36,10 @@ export const Actions = ({ actions }) => {
                         className={`ml-1 -mr-1 w-6 h-6 text-${theme.color}-50`}
                       />
                     )}
+                    <div
+                      class={`pointer-events-none absolute top-2 opacity-30 dark:opacity-50 left-0 w-full h-full rounded-full bg-${theme.color}-400 -z-1`}
+                      style={{ filter: "blur(3rem)" }}
+                    ></div>
                   </button>
                 );
               }
