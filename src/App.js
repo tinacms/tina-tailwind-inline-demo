@@ -39,7 +39,7 @@ const App = () => {
         <Theme>
           <Nav data={data.nav} />
           <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} />
-          <Footer name={data.nav.name} data={data.footer} />
+          <Footer name={data.nav.wordmark.name} data={data.footer} />
         </Theme>
       </InlineForm>
       {showModal && (
