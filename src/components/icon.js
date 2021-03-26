@@ -62,7 +62,7 @@ export const Icon = ({ icon }) => {
           <IconSVG className={`w-9 h-9`} />
           <div
             class={`absolute -z-1 top-2 opacity-40 left-0 w-14 h-14 bg-${iconColor}-400 dark:bg-${iconColor}-500`}
-            style={{ filter: "blur(3rem)" }}
+            style={{ filter: "blur(1.75rem)" }}
           ></div>
         </div>
       );
