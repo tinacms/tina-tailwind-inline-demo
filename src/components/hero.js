@@ -16,7 +16,7 @@ export const Hero = ({ data }) => {
       <div class="w-full pt-16 lg:py-56 lg:text-left">
         <div class="px-8 pb-14 lg:pb-0 lg:w-1/2 lg:px-12">
           <div className="max-w-3xl mx-auto">
-            <h2 class="w-full	mb-4 text-md font-bold tracking-wide title-font">
+            <h2 class="w-full	mb-5 text-md font-bold tracking-wide title-font">
               <InlineTextarea name="tagline" />
             </h2>
             <h3
