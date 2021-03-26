@@ -42,7 +42,7 @@ export const Actions = ({ actions }) => {
                 element = (
                   <a
                     href="#"
-                    class={`inline-flex items-center font-semibold mx-3 my-2 text-lg text-${theme.color}-600 hover:text-${theme.color}-400`}
+                    class={`inline-flex items-center font-semibold mx-3 my-2 text-lg text-${theme.color}-600 dark:text-${theme.color}-400 hover:text-${theme.color}-400 dark:hover:text-${theme.color}-500`}
                   >
                     {action.label}
                     {action.icon && (

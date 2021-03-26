@@ -1,13 +1,14 @@
 import * as React from "react";
 import { ThemeContext } from "./theme";
 import { InlineText, InlineGroup } from "react-tinacms-inline";
+import { Section } from "./section";
 
 export const Nav = ({ data }) => {
   const theme = React.useContext(ThemeContext);
 
   return (
-    <div class="text-gray-700 bg-white body-font">
-      <div class="flex flex-col flex-wrap py-8 px-8 lg:px-12 mx-auto bg-gray-50 border-b border-gray-100 md:items-center md:flex-row">
+    <Section>
+      <div class="flex flex-col flex-wrap py-8 px-8 lg:px-12 mx-auto md:items-center md:flex-row">
         <a
           href="#"
           class="pr-2 lg:pr-8 mb-4 md:mb-0 focus:outline-none flex items-center"
@@ -36,7 +37,7 @@ export const Nav = ({ data }) => {
               return (
                 <a
                   href="#"
-                  class={`ml-8 text-sm tracking-wide font-semibold text-gray-600 hover:text-${theme.color}-500`}
+                  class={`ml-8 text-sm tracking-wide font-semibold text-gray-600 dark:text-gray-200`}
                 >
                   {item.label}
                 </a>
@@ -45,7 +46,7 @@ export const Nav = ({ data }) => {
           </InlineGroup>
         </nav>
       </div>
-    </div>
+    </Section>
   );
 };
 

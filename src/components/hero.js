@@ -6,43 +6,46 @@ import {
   InlineTextarea,
 } from "react-tinacms-inline";
 import { ACTION_FIELDS, Actions } from "./actions";
+import { Section } from "./section";
 
 export const Hero = ({ data }) => {
   const theme = React.useContext(ThemeContext);
 
   return (
-    <section class="text-gray-700  body-font w-full pt-16 overflow-hidden lg:py-56 lg:text-left">
-      <div class="px-8 pb-14 lg:pb-0 lg:w-1/2 lg:px-12">
-        <div className="max-w-2xl mx-auto">
-          <h2 class="w-full	mb-4 text-md font-bold tracking-wide text-black title-font">
-            <InlineTextarea name="tagline" />
-          </h2>
-          <h3
-            class={`w-full	mb-6 text-4xl font-bold tracking-tight text-${theme.color}-500 text-left lg:text-5xl title-font`}
+    <Section variant="tint">
+      <div class="w-full pt-16 lg:py-56 lg:text-left">
+        <div class="px-8 pb-14 lg:pb-0 lg:w-1/2 lg:px-12">
+          <div className="max-w-2xl mx-auto">
+            <h2 class="w-full	mb-4 text-md font-bold tracking-wide title-font">
+              <InlineTextarea name="tagline" />
+            </h2>
+            <h3
+              class={`w-full	mb-6 text-4xl font-bold tracking-tight text-${theme.color}-500 text-left lg:text-5xl title-font`}
+            >
+              <InlineTextarea name="headline" />
+            </h3>
+            <p class="w-full mb-8 text-base opacity-80 text-left text-lg leading-relaxed lg:text-xl lg:leading-relaxed">
+              <InlineTextarea name="text" />
+            </p>
+            <Actions actions={data.actions} />
+          </div>
+        </div>
+        <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
+          <InlineGroup
+            name="image"
+            focusRing={{ offset: -16 }}
+            insetControls={true}
+            fields={IMAGE_FIELDS}
           >
-            <InlineTextarea name="headline" />
-          </h3>
-          <p class="w-full	mb-8 text-base  text-gray-700 text-left text-lg leading-relaxed lg:text-xl lg:leading-relaxed">
-            <InlineTextarea name="text" />
-          </p>
-          <Actions actions={data.actions} />
+            <img
+              class="absolute inset-0 w-full h-full object-cover"
+              alt={data.image.alt}
+              src={data.image.src}
+            />
+          </InlineGroup>
         </div>
       </div>
-      <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-        <InlineGroup
-          name="image"
-          focusRing={{ offset: -16 }}
-          insetControls={true}
-          fields={IMAGE_FIELDS}
-        >
-          <img
-            class="absolute inset-0 w-full h-full object-cover"
-            alt={data.image.alt}
-            src={data.image.src}
-          />
-        </InlineGroup>
-      </div>
-    </section>
+    </Section>
   );
 };
 

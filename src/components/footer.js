@@ -11,7 +11,7 @@ export const Footer = ({ data, name = "" }) => {
   const theme = React.useContext(ThemeContext);
 
   return (
-    <footer class="text-white bg-gray-700 body-font pt-3">
+    <footer class="text-white bg-gray-700 dark:bg-gray-800 body-font pt-3">
       <InlineGroup
         name="footer"
         focusRing={{ offset: -16 }}
@@ -35,7 +35,7 @@ export const Footer = ({ data, name = "" }) => {
             />
           </div>
         </div>
-        <div class="bg-gray-800">
+        <div class="bg-gray-800 dark:bg-gray-900">
           <div class="container flex flex-col flex-wrap px-5 py-6 mx-auto sm:flex-row justify-center">
             <div class="flex justify-center">
               {data.social.facebook && (

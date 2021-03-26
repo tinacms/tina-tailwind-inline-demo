@@ -5,6 +5,7 @@ import {
 } from "react-tinacms-inline";
 import { Icon, ICON_FIELDS } from "./icon";
 import { Actions, ACTION_FIELDS } from "./actions";
+import { Section } from "./section";
 
 export const FeatureBlock = ({ index, data }) => {
   return (
@@ -14,13 +15,13 @@ export const FeatureBlock = ({ index, data }) => {
         focusRing={{ offset: 16 }}
         insetControls={false}
       >
-        <div class={`mb-5`}>
+        <div class={`mb-6`}>
           <Icon icon={data.icon} />
         </div>
-        <h3 class="mb-3 text-lg font-semibold text-gray-700 lg:text-2xl title-font">
+        <h3 class="mb-4 text-lg font-semibold lg:text-2xl title-font">
           <InlineTextarea name="title" />
         </h3>
-        <p class="mb-4 text-base leading-relaxed">
+        <p class="mb-5 text-base opacity-80 leading-relaxed">
           <InlineTextarea name="text" />
         </p>
         <Actions actions={data.actions} />
@@ -69,7 +70,7 @@ export const feature_template = {
 
 export const Features = ({ data }) => {
   return (
-    <section class="text-gray-700 body-font bg-gray-50 border-b border-t border-gray-100 h-full">
+    <Section>
       <div class="container py-24 mx-auto">
         <InlineBlocks
           direction="horizontal"
@@ -78,7 +79,7 @@ export const Features = ({ data }) => {
           blocks={FEATURE_BLOCKS}
         />
       </div>
-    </section>
+    </Section>
   );
 };
 
