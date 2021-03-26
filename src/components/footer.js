@@ -11,15 +11,15 @@ export const Footer = ({ data, name = "" }) => {
   const theme = React.useContext(ThemeContext);
 
   return (
-    <footer class="text-white bg-gray-700 dark:bg-gray-800 body-font pt-3">
+    <footer class="text-white bg-gray-700 dark:bg-gray-800 body-font">
       <InlineGroup
         name="footer"
         focusRing={{ offset: -16 }}
         insetControls={true}
         fields={FOOTER_FIELDS}
       >
-        <div className="container mx-auto flex">
-          <div class="w-full flex flex-col lg:flex-row flex-wrap py-12 px-8 lg:px-12">
+        <div className="container mx-auto flex pt-3">
+          <div class="w-full flex flex-col lg:flex-row flex-wrap py-12 px-8">
             <div class="mb-8 lg:mr-48 flex-grow-0 inline-block">
               <a class="">
                 <h2 class="text-lg font-bold tracking-tight text-white uppercase transition duration-500 ease-in-out transform hover:text-lightBlack-500">
