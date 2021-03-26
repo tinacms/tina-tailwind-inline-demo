@@ -57,11 +57,11 @@ export const Icon = ({ icon }) => {
     if (icon.style == "circle") {
       return (
         <div
-          class={`relative inline-flex items-center justify-center flex-shrink-0 w-14 h-14 bg-${iconColor}-400 dark:bg-${iconColor}-500 text-${iconColor}-50 rounded-full`}
+          class={`relative z-10 inline-flex items-center justify-center flex-shrink-0 w-14 h-14 bg-${iconColor}-400 dark:bg-${iconColor}-500 text-${iconColor}-50 rounded-full`}
         >
           <IconSVG className={`w-9 h-9`} />
           <div
-            class={`absolute top-2 opacity-40 left-0 w-14 h-14 bg-${iconColor}-400 dark:bg-${iconColor}-500`}
+            class={`absolute -z-1 top-2 opacity-40 left-0 w-14 h-14 bg-${iconColor}-400 dark:bg-${iconColor}-500`}
             style={{ filter: "blur(3rem)" }}
           ></div>
         </div>
