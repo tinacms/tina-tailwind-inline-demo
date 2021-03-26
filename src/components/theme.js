@@ -19,8 +19,8 @@ export const Theme = ({ children }) => {
             value: "blue",
           },
           {
-            label: "Pink",
-            value: "pink",
+            label: "Teal",
+            value: "teal",
           },
           {
             label: "Green",
@@ -31,8 +31,16 @@ export const Theme = ({ children }) => {
             value: "red",
           },
           {
+            label: "Pink",
+            value: "pink",
+          },
+          {
             label: "Purple",
             value: "purple",
+          },
+          {
+            label: "Orange",
+            value: "orange",
           },
           {
             label: "Yellow",

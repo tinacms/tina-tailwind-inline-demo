@@ -103,8 +103,8 @@ export const ICON_FIELDS = [
             value: "blue",
           },
           {
-            label: "Pink",
-            value: "pink",
+            label: "Teal",
+            value: "teal",
           },
           {
             label: "Green",
@@ -115,8 +115,16 @@ export const ICON_FIELDS = [
             value: "red",
           },
           {
+            label: "Pink",
+            value: "pink",
+          },
+          {
             label: "Purple",
             value: "purple",
+          },
+          {
+            label: "Orange",
+            value: "orange",
           },
           {
             label: "Yellow",

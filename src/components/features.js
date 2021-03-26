@@ -102,7 +102,7 @@ export const features_template = {
       {
         _template: "feature",
         icon: {
-          color: "green",
+          color: "red",
           name: "BiTrophy",
           style: "circle",
         },
