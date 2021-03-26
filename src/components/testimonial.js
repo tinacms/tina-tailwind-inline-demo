@@ -65,5 +65,16 @@ export const testimonial_template = {
       "There are only two hard things in Computer Science: cache invalidation and naming things.",
     author: "Phil Karlton",
   },
-  fields: [],
+  fields: [
+    {
+      name: "quote",
+      label: "Quote",
+      component: "textarea",
+    },
+    {
+      name: "author",
+      label: "Author",
+      component: "text",
+    },
+  ],
 };
