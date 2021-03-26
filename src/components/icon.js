@@ -1,4 +1,5 @@
 import * as React from "react";
+import { ThemeContext } from "./theme";
 import { InlineGroup } from "react-tinacms-inline";
 import {
   BiCodeBlock,
@@ -43,24 +44,28 @@ const iconOptions = {
 };
 
 export const Icon = ({ icon }) => {
+  const theme = React.useContext(ThemeContext);
+
   const IconSVG = React.useMemo(() => {
     return icon.name ? iconOptions[icon.name] : randomProperty(iconOptions);
   }, [icon.name]);
 
   const Component = React.useMemo(() => {
+    const iconColor = icon.color === "primary" ? theme.color : icon.color;
+
     if (!IconSVG) return null;
     if (icon.style == "circle") {
       return (
         <div
-          class={`inline-flex items-center justify-center flex-shrink-0 w-12 h-12 bg-${icon.color}-400 text-${icon.color}-50 rounded-full`}
+          class={`inline-flex items-center justify-center flex-shrink-0 w-12 h-12 bg-${iconColor}-400 text-${iconColor}-50 rounded-full`}
         >
           <IconSVG className={`w-8 h-8`} />
         </div>
       );
     } else {
-      return <IconSVG className={`w-12 h-12 text-${icon.color}-400`} />;
+      return <IconSVG className={`w-12 h-12 text-${iconColor}-400`} />;
     }
-  }, [icon.style, IconSVG, icon.color]);
+  }, [icon.style, IconSVG, icon.color, theme.color]);
 
   return (
     <InlineGroup
@@ -85,6 +90,10 @@ export const ICON_FIELDS = [
         label: "Color",
         component: "select",
         options: [
+          {
+            label: "Primary (Theme)",
+            value: "primary",
+          },
           {
             label: "Blue",
             value: "blue",

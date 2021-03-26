@@ -33,7 +33,7 @@ export const feature_template = {
   label: "Feature",
   defaultItem: {
     icon: {
-      color: "blue",
+      color: "primary",
       name: "",
       style: "circle",
     },
@@ -119,7 +119,7 @@ export const features_template = {
       {
         _template: "feature",
         icon: {
-          color: "red",
+          color: "primary",
           name: "BiPieChartAlt2",
           style: "circle",
         },

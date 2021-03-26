@@ -61,7 +61,7 @@
         {
           "_template": "feature",
           "icon": {
-            "color": "red",
+            "color": "primary",
             "name": "BiCloud",
             "style": "circle"
           },
