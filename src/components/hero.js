@@ -11,9 +11,9 @@ export const Hero = ({ data }) => {
   const theme = React.useContext(ThemeContext);
 
   return (
-    <section class="text-gray-700  body-font">
-      <div class="container flex flex-col items-center px-8 py-24 mx-auto md:flex-row">
-        <div class="flex flex-col    w-full pt-0 mb-16 text-left lg:flex-grow md:w-1/2 lg:w-3/5 md:pr-24 md:items-start md:mb-0 ">
+    <section class="text-gray-700  body-font w-full pt-16 overflow-hidden lg:py-56 lg:text-left">
+      <div class="px-8 pb-14 lg:pb-0 lg:w-1/2 lg:px-12">
+        <div className="max-w-2xl mx-auto">
           <h2 class="w-full	mb-4 text-md font-bold tracking-wide text-black title-font">
             <InlineTextarea name="tagline" />
           </h2>
@@ -27,20 +27,20 @@ export const Hero = ({ data }) => {
           </p>
           <Actions actions={data.actions} />
         </div>
-        <div class="w-100 md:w-1/2 lg:w-2/5">
-          <InlineGroup
-            name="image"
-            focusRing={{ offset: 16 }}
-            insetControls={true}
-            fields={IMAGE_FIELDS}
-          >
-            <img
-              class="object-cover object-center rounded-lg "
-              alt={data.image.alt}
-              src={data.image.src}
-            />
-          </InlineGroup>
-        </div>
+      </div>
+      <div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
+        <InlineGroup
+          name="image"
+          focusRing={{ offset: -16 }}
+          insetControls={true}
+          fields={IMAGE_FIELDS}
+        >
+          <img
+            class="absolute inset-0 w-full h-full object-cover"
+            alt={data.image.alt}
+            src={data.image.src}
+          />
+        </InlineGroup>
       </div>
     </section>
   );
@@ -79,7 +79,7 @@ export const hero_template = {
     text:
       "Give your team a contextual, intuitive editing experience without sacrificing code quality.",
     image: {
-      src: "https://source.unsplash.com/collection/300768/720x500",
+      src: "/canal.jpg",
       alt: "Photo from Unsplash",
     },
     actions: [

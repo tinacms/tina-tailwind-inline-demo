@@ -57,13 +57,13 @@ export const Icon = ({ icon }) => {
     if (icon.style == "circle") {
       return (
         <div
-          class={`inline-flex items-center justify-center flex-shrink-0 w-12 h-12 bg-${iconColor}-400 text-${iconColor}-50 rounded-full`}
+          class={`inline-flex items-center justify-center flex-shrink-0 w-14 h-14 bg-${iconColor}-400 text-${iconColor}-50 rounded-full`}
         >
-          <IconSVG className={`w-8 h-8`} />
+          <IconSVG className={`w-9 h-9`} />
         </div>
       );
     } else {
-      return <IconSVG className={`w-12 h-12 text-${iconColor}-400`} />;
+      return <IconSVG className={`w-14 h-14 text-${iconColor}-400`} />;
     }
   }, [icon.style, IconSVG, icon.color, theme.color]);
 

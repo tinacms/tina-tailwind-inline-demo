@@ -11,27 +11,29 @@ export const Footer = ({ data, name = "" }) => {
   const theme = React.useContext(ThemeContext);
 
   return (
-    <footer class="text-white bg-gray-700 body-font">
+    <footer class="text-white bg-gray-700 body-font pt-3">
       <InlineGroup
         name="footer"
         focusRing={{ offset: -16 }}
         insetControls={true}
         fields={FOOTER_FIELDS}
       >
-        <div class="container flex flex-col flex-wrap p-8 mx-auto md:items-center lg:items-start md:flex-row md:flex-no-wrap ">
-          <div class="flex-shrink-0 w-64 mx-auto text-center md:mx-0 md:text-left">
-            <a class="flex items-center justify-center font-medium text-gray-900 title-font md:justify-start ">
-              <h2 class="text-lg font-bold tracking-tight text-white uppercase transition duration-500 ease-in-out transform hover:text-lightBlack-500">
-                {name}
-              </h2>
-            </a>
+        <div className="container mx-auto flex">
+          <div class="w-full flex flex-col lg:flex-row flex-wrap py-12 px-8 lg:px-12">
+            <div class="mb-8 lg:mr-48 flex-grow-0 inline-block">
+              <a class="">
+                <h2 class="text-lg font-bold tracking-tight text-white uppercase transition duration-500 ease-in-out transform hover:text-lightBlack-500">
+                  {name}
+                </h2>
+              </a>
+            </div>
+            <InlineBlocks
+              direction="horizontal"
+              className="flex-grow flex flex-wrap justify-between"
+              name="navlist"
+              blocks={FOOTER_BLOCKS}
+            />
           </div>
-          <InlineBlocks
-            direction="horizontal"
-            className="flex flex-wrap flex-grow mt-8 -mb-10 text-left md:pl-20 md:mt-0"
-            name="navlist"
-            blocks={FOOTER_BLOCKS}
-          />
         </div>
         <div class="bg-gray-800">
           <div class="container flex flex-col flex-wrap px-5 py-6 mx-auto sm:flex-row justify-center">
@@ -108,7 +110,7 @@ export const FooterNavBlock = ({ index, data }) => {
   const theme = React.useContext(ThemeContext);
 
   return (
-    <div class="w-full px-4 lg:w-1/3 md:w-1/2">
+    <div class="flex-grow">
       <BlocksControls
         index={index}
         focusRing={{ offset: 16 }}
@@ -119,7 +121,7 @@ export const FooterNavBlock = ({ index, data }) => {
         >
           <InlineTextarea name="title" />
         </h3>
-        <nav class="mb-10 list-none">
+        <nav class="pb-8 list-none">
           {data.items &&
             data.items.map(function (item, index) {
               return (

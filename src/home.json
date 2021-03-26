@@ -23,7 +23,7 @@
       "headline": "This is a large display heading.",
       "text": "Give your team a contextual, intuitive editing experience without sacrificing code quality. Unlock your team with next-gen editing.",
       "image": {
-        "src": "https://source.unsplash.com/collection/300768/720x500",
+        "src": "/canal.jpg",
         "alt": "Photo from Unsplash"
       },
       "actions": [
