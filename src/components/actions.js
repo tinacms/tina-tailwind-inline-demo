@@ -27,6 +27,8 @@ export const Actions = ({ actions }) => {
                       theme.button.style === "round" && `rounded-full`
                     } transform bg-${theme.color}-500 hover:bg-${
                       theme.color
+                    }-600 bg-gradient-to-r from-${theme.color}-400 to-${
+                      theme.color
                     }-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 whitespace-nowrap`}
                     style={{ textShadow: "0 2px 5px rgba(0,0,0,0.1)" }}
                   >
