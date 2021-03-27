@@ -19,6 +19,13 @@ module.exports = {
       yellow: colors.yellow,
       orange: colors.orange,
     },
+    screens: {
+      sm: "600px",
+      md: "900px",
+      lg: "1200px",
+      xl: "1500px",
+      "2xl": "1800px",
+    },
     extend: {
       zIndex: {
         "-1": "-1",

@@ -30,7 +30,7 @@ export const Footer = ({ data, name = "" }) => {
               </div>
               <InlineBlocks
                 direction="horizontal"
-                className="flex-grow flex flex-wrap justify-between"
+                className="flex-grow flex flex-wrap justify-between -mx-6"
                 name="navlist"
                 blocks={FOOTER_BLOCKS}
               />
@@ -123,7 +123,7 @@ export const FooterNavBlock = ({ index, data }) => {
   const theme = React.useContext(ThemeContext);
 
   return (
-    <div class="flex-grow">
+    <div class="flex-grow px-6">
       <BlocksControls
         index={index}
         focusRing={{ offset: 16 }}
