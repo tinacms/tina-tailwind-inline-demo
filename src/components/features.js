@@ -10,24 +10,26 @@ import { Section } from "./section";
 export const FeatureBlock = ({ index, data }) => {
   return (
     <div
-      class="px-12 py-6 w-full xl:w-auto flex-grow xl:flex-shrink"
-      style={{ flexBasis: "24rem" }}
+      class="px-8 py-6 w-full xl:w-auto flex-grow xl:flex-shrink"
+      style={{ flexBasis: "22rem" }}
     >
       <BlocksControls
         index={index}
         focusRing={{ offset: 16 }}
         insetControls={false}
       >
-        <div class={`mb-6`}>
-          <Icon icon={data.icon} />
+        <div className="max-w-lg">
+          <div class={`mb-6 w-auto inline-block`}>
+            <Icon icon={data.icon} />
+          </div>
+          <h3 class="mb-4 text-xl font-semibold lg:text-2xl title-font">
+            <InlineTextarea name="title" />
+          </h3>
+          <p class="mb-5 text-base opacity-80 leading-relaxed">
+            <InlineTextarea name="text" />
+          </p>
+          <Actions actions={data.actions} />
         </div>
-        <h3 class="mb-4 text-xl font-semibold lg:text-2xl title-font">
-          <InlineTextarea name="title" />
-        </h3>
-        <p class="mb-5 text-base opacity-80 leading-relaxed">
-          <InlineTextarea name="text" />
-        </p>
-        <Actions actions={data.actions} />
       </BlocksControls>
     </div>
   );

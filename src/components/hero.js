@@ -23,7 +23,7 @@ export const Hero = ({ data }) => {
               class={`w-full relative	mb-6 text-4xl font-extrabold tracking-normal	 text-left lg:text-5xl title-font`}
             >
               <span
-                className={`absolute z-20 pointer-events-none w-full h-full bg-clip-text text-transparent bg-gradient-to-r from-${theme.color}-400 to-${theme.color}-600`}
+                className={`absolute z-20 pointer-events-none w-full top-0 -bottom-4 bg-clip-text text-transparent bg-gradient-to-r from-${theme.color}-400 to-${theme.color}-600`}
               >
                 {data.headline}
               </span>

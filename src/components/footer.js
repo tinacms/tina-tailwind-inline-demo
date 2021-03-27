@@ -11,7 +11,7 @@ export const Footer = ({ data, name = "" }) => {
   const theme = React.useContext(ThemeContext);
 
   return (
-    <footer class="text-white bg-gray-700 dark:bg-gray-800 body-font">
+    <footer class="text-white bg-gradient-to-br from-gray-700 to-gray-800 dark:from-gray-900 dark:to-gray-800 body-font">
       <InlineGroup
         name="footer"
         focusRing={{ offset: -16 }}
@@ -20,7 +20,7 @@ export const Footer = ({ data, name = "" }) => {
       >
         <div className="relative">
           <div className="relative container mx-auto flex pt-8 lg:pt-3 z-10">
-            <div class="w-full flex flex-col lg:flex-row flex-wrap py-12 px-12">
+            <div class="w-full flex flex-col lg:flex-row flex-wrap py-12 px-8">
               <div class="mb-8 lg:mr-48 flex-grow-0 inline-block">
                 <a class="">
                   <h2 class="text-lg font-bold tracking-tight text-white uppercase transition duration-500 ease-in-out transform hover:text-lightBlack-500">
