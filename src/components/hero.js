@@ -23,7 +23,14 @@ export const Hero = ({ data }) => {
               class={`w-full relative	mb-6 text-4xl font-extrabold tracking-normal	 text-left lg:text-5xl title-font`}
             >
               <span
-                className={`absolute z-10 pointer-events-none w-full h-full bg-clip-text text-transparent bg-gradient-to-r from-${theme.color}-400 to-${theme.color}-600`}
+                className={`absolute z-20 pointer-events-none w-full h-full bg-clip-text text-transparent bg-gradient-to-r from-${theme.color}-400 to-${theme.color}-600`}
+              >
+                {data.headline}
+              </span>
+              <span
+                aria-hidden="true"
+                className={`absolute z-10 opacity-20 pointer-events-none w-full h-full bg-clip-text text-transparent bg-gradient-to-r from-${theme.color}-400 to-${theme.color}-600`}
+                style={{ filter: "blur(1.75rem)" }}
               >
                 {data.headline}
               </span>
