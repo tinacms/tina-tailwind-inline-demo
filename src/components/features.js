@@ -10,7 +10,7 @@ import { Section } from "./section";
 export const FeatureBlock = ({ index, data }) => {
   return (
     <div
-      class="px-12 py-6 w-full xl:w-auto xl:flex-grow xl:flex-shrink"
+      class="px-12 py-6 w-full xl:w-auto flex-grow xl:flex-shrink"
       style={{ flexBasis: "24rem" }}
     >
       <BlocksControls
@@ -21,7 +21,7 @@ export const FeatureBlock = ({ index, data }) => {
         <div class={`mb-6`}>
           <Icon icon={data.icon} />
         </div>
-        <h3 class="mb-4 text-lg font-semibold lg:text-2xl title-font">
+        <h3 class="mb-4 text-xl font-semibold lg:text-2xl title-font">
           <InlineTextarea name="title" />
         </h3>
         <p class="mb-5 text-base opacity-80 leading-relaxed">
@@ -74,7 +74,7 @@ export const feature_template = {
 export const Features = ({ data }) => {
   return (
     <Section>
-      <div class="container py-24 mx-auto">
+      <div class="container py-12 lg:py-24 mx-auto">
         <InlineBlocks
           direction="horizontal"
           className="flex flex-wrap text-left"

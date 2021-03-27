@@ -11,7 +11,7 @@ export const Footer = ({ data, name = "" }) => {
   const theme = React.useContext(ThemeContext);
 
   return (
-    <footer class="overflow-hidden text-white bg-gray-700 dark:bg-gray-800 body-font">
+    <footer class="text-white bg-gray-700 dark:bg-gray-800 body-font">
       <InlineGroup
         name="footer"
         focusRing={{ offset: -16 }}
@@ -19,7 +19,7 @@ export const Footer = ({ data, name = "" }) => {
         fields={FOOTER_FIELDS}
       >
         <div className="relative">
-          <div className="relative container mx-auto flex pt-3 z-10">
+          <div className="relative container mx-auto flex pt-8 lg:pt-3 z-10">
             <div class="w-full flex flex-col lg:flex-row flex-wrap py-12 px-12">
               <div class="mb-8 lg:mr-48 flex-grow-0 inline-block">
                 <a class="">
@@ -36,13 +36,18 @@ export const Footer = ({ data, name = "" }) => {
               />
             </div>
           </div>
-          <div className={`flex flex-row justify-center w-full`}>
+          <div
+            className={`overflow-hidden absolute top-0 left-0 w-full h-full flex flex-row justify-center`}
+          >
             <span
-              className={`absolute opacity-20 w-2/3 h-64 bg-${theme.color}-500 -bottom-48 rounded-t-full`}
+              className={`absolute opacity-30 w-2/3 h-64 bg-${theme.color}-500 -bottom-48 rounded-t-full`}
               style={{ filter: "blur(10rem)" }}
             ></span>
           </div>
-          <div class="bg-gray-800 dark:bg-gray-900 z-20 relative">
+          <div
+            className={`relative w-full h-1 z-20 bg-gradient-to-r from-gray-800 via-${theme.color}-400 to-gray-800`}
+          ></div>
+          <div class="bg-gray-800 dark:bg-gray-900 z-0 relative">
             <div class="container flex flex-col flex-wrap p-7 mx-auto sm:flex-row justify-center">
               <div class="flex justify-center">
                 {data.social.facebook && (
