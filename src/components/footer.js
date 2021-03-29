@@ -37,7 +37,7 @@ export const Footer = ({ data, name = "" }) => {
             </div>
           </div>
           <div
-            className={`overflow-hidden animate-pulse absolute top-0 left-0 w-full h-full flex flex-row justify-center`}
+            className={`overflow-hidden absolute top-0 left-0 w-full h-full flex flex-row justify-center`}
           >
             <span
               className={`absolute opacity-30 w-2/3 h-64 bg-${theme.color}-500 -bottom-48 rounded-t-full`}
