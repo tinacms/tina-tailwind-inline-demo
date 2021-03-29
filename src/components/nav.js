@@ -17,7 +17,7 @@ export const Nav = ({ data }) => {
         name="nav"
         fields={NAV_FIELDS}
       >
-        <div class="flex flex-col flex-wrap py-8 px-8 lg:px-12 2xl:px-16 mx-auto md:items-center md:flex-row">
+        <div class="relative flex flex-col flex-wrap py-8 px-8 lg:px-12 2xl:px-16 mx-auto md:items-center md:flex-row">
           <a
             href="#"
             class="pr-2 lg:pr-8 mb-8 md:mb-0 focus:outline-none flex items-center"
@@ -33,23 +33,25 @@ export const Nav = ({ data }) => {
               </h2>
             </div>
           </a>
-          <nav class="flex flex-wrap items-center justify-start xl:justify-end text-base md:ml-auto">
-            {data.items.map(function (item, index) {
-              return (
-                <a
-                  href="#"
-                  class={`mr-10 last:mr-0 xl:ml-16 xl:mr-0 text-sm tracking-wide font-semibold transition duration-150 ease-out text-gray-600 dark:text-gray-200`}
-                >
-                  {item.label}
-                </a>
-              );
-            })}
+          <div className="flex-grow md:flex md:justify-end">
+            <nav class="flex flex-wrap items-center justify-between sm:justify-end text-base -mx-2 sm:-mx-6 md:mx-0">
+              {data.items.map(function (item, index) {
+                return (
+                  <a
+                    href="#"
+                    class={`mx-2 sm:mx-6 md:mx-8 text-sm tracking-wide font-semibold transition duration-150 ease-out text-gray-600 dark:text-gray-200`}
+                  >
+                    {item.label}
+                  </a>
+                );
+              })}
+            </nav>
             <button
               onClick={() => {
                 theme.toggleThemeMode();
               }}
               type="button"
-              className="relative outline-none focus:outline-none transparent xl:ml-16 xl:mr-0 "
+              className="ml-8 outline-none opacity-30 focus:opacity-100 focus:outline-none transparent absolute top-9 right-6  md:relative  md:top-auto  md:right-auto"
               aria-pressed="false"
             >
               <BiSun
@@ -63,7 +65,7 @@ export const Nav = ({ data }) => {
                 }`}
               />
             </button>
-          </nav>
+          </div>
         </div>
       </InlineGroup>
     </Section>

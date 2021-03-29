@@ -45,7 +45,7 @@ export const Footer = ({ data, name = "" }) => {
             ></span>
           </div>
           <div
-            className={`relative w-full h-1 z-20 bg-gradient-to-r from-gray-800 via-${theme.color}-400 to-gray-800`}
+            className={`relative w-full h-1 opacity-90 z-10 bg-gradient-to-r from-gray-800 via-${theme.color}-400 to-gray-800`}
           ></div>
           <div class="bg-gray-800 dark:bg-gray-900 z-0 relative">
             <div class="container flex flex-col flex-wrap p-7 mx-auto sm:flex-row justify-center">
