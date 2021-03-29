@@ -3,6 +3,8 @@ import { ThemeContext } from "./theme";
 import { InlineText, InlineGroup } from "react-tinacms-inline";
 import { Section } from "./section";
 import { Icon, ICON_FIELDS } from "./icon";
+import { BiSun } from "react-icons/bi";
+import { RiMoonClearLine } from "react-icons/ri";
 
 export const Nav = ({ data }) => {
   const theme = React.useContext(ThemeContext);
@@ -15,7 +17,7 @@ export const Nav = ({ data }) => {
         name="nav"
         fields={NAV_FIELDS}
       >
-        <div class="flex flex-col flex-wrap py-8 px-8 lg:px-12 mx-auto md:items-center md:flex-row">
+        <div class="flex flex-col flex-wrap py-8 px-8 lg:px-12 2xl:px-16 mx-auto md:items-center md:flex-row">
           <a
             href="#"
             class="pr-2 lg:pr-8 mb-8 md:mb-0 focus:outline-none flex items-center"
@@ -26,7 +28,7 @@ export const Nav = ({ data }) => {
                   <Icon icon={data.wordmark.icon} />
                 </InlineGroup>
               </div>
-              <h2 class="font-bold tracking-tight transition duration-1000 ease-in-out transform text-blueGray-500 dark:text-blueGray-200 lg:text-md text-bold">
+              <h2 class="font-bold tracking-tight transition duration-150 ease-out transform text-blueGray-500 dark:text-blueGray-200 lg:text-md text-bold">
                 <InlineText focusRing={{ offset: 8 }} name="wordmark.name" />
               </h2>
             </div>
@@ -36,12 +38,31 @@ export const Nav = ({ data }) => {
               return (
                 <a
                   href="#"
-                  class={`mr-10 last:mr-0 xl:ml-16 xl:mr-0 text-sm tracking-wide font-semibold text-gray-600 dark:text-gray-200`}
+                  class={`mr-10 last:mr-0 xl:ml-16 xl:mr-0 text-sm tracking-wide font-semibold transition duration-150 ease-out text-gray-600 dark:text-gray-200`}
                 >
                   {item.label}
                 </a>
               );
             })}
+            <button
+              onClick={() => {
+                theme.toggleThemeMode();
+              }}
+              type="button"
+              className="relative outline-none focus:outline-none transparent xl:ml-16 xl:mr-0 "
+              aria-pressed="false"
+            >
+              <BiSun
+                className={`w-6 h-6 transition duration-300 ease-out transform ${
+                  theme.themeMode === "light" && "opacity-0 rotate-90"
+                }`}
+              />
+              <RiMoonClearLine
+                className={`w-6 h-6 absolute top-0 left-0 transition duration-300 ease-out transform  ${
+                  theme.themeMode === "dark" && "opacity-0 -rotate-90"
+                }`}
+              />
+            </button>
           </nav>
         </div>
       </InlineGroup>

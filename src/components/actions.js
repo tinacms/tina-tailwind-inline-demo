@@ -21,7 +21,7 @@ export const Actions = ({ actions }) => {
               if (action.type === "button") {
                 element = (
                   <button
-                    class={`z-10 relative flex items-center px-7 py-3 mx-3 my-2 font-semibold text-lg text-white transition duration-500 ease-in-out ${
+                    class={`z-10 relative flex items-center px-7 py-3 mx-3 my-2 font-semibold text-lg transition duration-150 ease-out text-white transition duration-500 ease-in-out ${
                       theme.button.style === "rounded" && `rounded-lg`
                     } ${
                       theme.button.style === "round" && `rounded-full`
@@ -49,7 +49,7 @@ export const Actions = ({ actions }) => {
                 element = (
                   <a
                     href="#"
-                    class={`inline-flex items-center font-semibold mx-3 my-2 text-lg text-${theme.color}-600 dark:text-${theme.color}-400 hover:text-${theme.color}-400 dark:hover:text-${theme.color}-500`}
+                    class={`inline-flex items-center font-semibold mx-3 my-2 text-lg transition duration-150 ease-out text-${theme.color}-600 dark:text-${theme.color}-400 hover:text-${theme.color}-400 dark:hover:text-${theme.color}-500`}
                   >
                     {action.label}
                     {action.icon && (

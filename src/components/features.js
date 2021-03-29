@@ -22,10 +22,10 @@ export const FeatureBlock = ({ index, data }) => {
           <div class={`mb-6 w-auto inline-block`}>
             <Icon icon={data.icon} />
           </div>
-          <h3 class="mb-4 text-2xl font-semibold title-font">
+          <h3 class="mb-4 transition duration-150 ease-out text-2xl font-semibold title-font">
             <InlineTextarea name="title" />
           </h3>
-          <p class="mb-5 text-base opacity-80 leading-relaxed">
+          <p class="mb-5 transition duration-150 ease-out text-base opacity-80 leading-relaxed">
             <InlineTextarea name="text" />
           </p>
           <Actions actions={data.actions} />

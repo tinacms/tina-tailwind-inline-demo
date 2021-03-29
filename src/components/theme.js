@@ -4,7 +4,58 @@ import ThemeData from "../theme.json";
 
 export const ThemeContext = React.createContext(ThemeData);
 
+const getInitialThemeMode = (_) => {
+  if (typeof window !== "undefined") {
+    if (window.localStorage) {
+      const storedPrefs = window.localStorage.getItem("theme-mode");
+
+      if (typeof storedPrefs === "string") {
+        return storedPrefs;
+      }
+    }
+
+    const userMedia = window.matchMedia("(prefers-color-scheme: dark)");
+
+    if (userMedia.matches) {
+      return "dark";
+    }
+  }
+
+  return "light";
+};
+
+const updateRenderColorMode = (themeMode) => {
+  if (typeof window !== "undefined") {
+    const root = window.document.documentElement;
+    root.classList.remove("dark");
+    root.classList.remove("light");
+    root.classList.add(themeMode);
+  }
+};
+
 export const Theme = ({ children }) => {
+  const [themeMode, setThemeMode] = React.useState(getInitialThemeMode);
+
+  const toggleThemeMode = () => {
+    let newMode = "";
+
+    if (themeMode === "light") {
+      newMode = "dark";
+    } else {
+      newMode = "light";
+    }
+
+    setThemeMode(newMode);
+
+    if (typeof window !== "undefined" && window.localStorage) {
+      window.localStorage.setItem("theme-mode", newMode);
+    }
+  };
+
+  React.useEffect(() => {
+    updateRenderColorMode(themeMode);
+  }, [themeMode]);
+
   const [themeData, themeForm] = useForm({
     initialValues: ThemeData,
     label: "Theme",
@@ -74,6 +125,8 @@ export const Theme = ({ children }) => {
   useFormScreenPlugin(themeForm);
 
   return (
-    <ThemeContext.Provider value={themeData}>{children}</ThemeContext.Provider>
+    <ThemeContext.Provider value={{ themeMode, toggleThemeMode, ...themeData }}>
+      {children}
+    </ThemeContext.Provider>
   );
 };

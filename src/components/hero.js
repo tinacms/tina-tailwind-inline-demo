@@ -38,7 +38,7 @@ export const Hero = ({ data }) => {
                 <InlineTextarea name="headline" />
               </span>
             </h3>
-            <p class="w-full max-w-xl mb-8 text-base opacity-80 text-left text-lg leading-relaxed lg:text-xl lg:leading-relaxed">
+            <p class="w-full max-w-xl mb-8 text-base opacity-80 transition duration-150 ease-out text-left text-lg leading-relaxed lg:text-xl lg:leading-relaxed">
               <InlineTextarea name="text" />
             </p>
             <Actions actions={data.actions} />
