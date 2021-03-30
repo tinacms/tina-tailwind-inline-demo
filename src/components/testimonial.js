@@ -11,22 +11,22 @@ export const Testimonial = () => {
 
   return (
     <section
-      class={`py-24 bg-${theme.color}-700 bg-gradient-to-br from-${theme.color}-500 to-${theme.color}-700`}
+      className={`py-24 bg-${theme.color}-700 bg-gradient-to-br from-${theme.color}-500 to-${theme.color}-700`}
     >
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="relative">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative">
           <blockquote>
-            <div class="relative z-10 max-w-3xl mx-auto text-center text-4xl lg:text-5xl font-extrabold tracking-normal text-left title-font text-white">
+            <div className="relative z-10 max-w-3xl mx-auto text-center text-4xl lg:text-5xl font-extrabold tracking-normal text-left title-font text-white">
               <span
-                class={`block opacity-20 text-black text-${theme.color}-700 text-8xl absolute inset-y-1/2 transform translate-y-2	-left-4 leading-4 -z-1`}
+                className={`block opacity-20 text-black text-${theme.color}-700 text-8xl absolute inset-y-1/2 transform translate-y-2	-left-4 leading-4 -z-1`}
               >
                 &ldquo;
               </span>
-              <p class="relative opacity-95">
+              <p className="relative opacity-95">
                 <InlineTextarea name="quote" />
               </p>
               <span
-                class={`block opacity-20 text-black text-${theme.color}-800 text-8xl absolute inset-y-1/2 transform translate-y-3	-right-4 leading-4 -z-1`}
+                className={`block opacity-20 text-black text-${theme.color}-800 text-8xl absolute inset-y-1/2 transform translate-y-3	-right-4 leading-4 -z-1`}
               >
                 &rdquo;
               </span>
@@ -36,9 +36,9 @@ export const Testimonial = () => {
                 className={`block mx-auto h-0.5 w-1/6 bg-${theme.color}-700 opacity-70`}
               ></span>
             </div>
-            <footer class="text-center">
+            <footer className="text-center">
               <p
-                class={`tracking-wide title-font font-bold text-base text-${theme.color}-300`}
+                className={`tracking-wide title-font font-bold text-base text-${theme.color}-300`}
               >
                 <InlineTextarea name="author" />
               </p>
