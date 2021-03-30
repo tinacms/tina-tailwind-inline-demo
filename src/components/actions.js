@@ -39,8 +39,8 @@ export const Actions = ({ actions }) => {
                       />
                     )}
                     <div
-                      class={`pointer-events-none absolute top-2 opacity-20 dark:opacity-50 left-0 w-full h-full rounded-full bg-${theme.color}-400 -z-1`}
-                      style={{ filter: "blur(1.75rem)" }}
+                      class={`pointer-events-none absolute top-2 opacity-30 dark:opacity-50 left-0 w-full h-full rounded-full bg-${theme.color}-400 -z-1`}
+                      style={{ filter: "blur(1.5rem)" }}
                     ></div>
                   </button>
                 );

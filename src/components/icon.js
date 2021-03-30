@@ -69,7 +69,7 @@ export const Icon = ({ icon }) => {
             )}`}
           />
           <div
-            class={`absolute -z-1 top-2 opacity-30 left-0 w-${iconSize} h-${iconSize} bg-${iconColor}-400 dark:bg-${iconColor}-500`}
+            class={`absolute -z-1 top-2 opacity-30 dark:opacity-40 left-0 w-${iconSize} h-${iconSize} bg-${iconColor}-400 dark:bg-${iconColor}-500`}
             style={{ filter: "blur(1.75rem)" }}
           ></div>
         </div>
