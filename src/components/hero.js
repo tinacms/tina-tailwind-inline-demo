@@ -13,10 +13,10 @@ export const Hero = ({ data }) => {
 
   return (
     <Section variant="tint">
-      <div class="w-full pt-20 lg:py-56 lg:text-left">
-        <div class="px-8 pb-20 lg:pb-0 lg:w-1/2 lg:px-12">
+      <div className="w-full pt-20 lg:py-56 lg:text-left">
+        <div className="px-8 pb-20 lg:pb-0 lg:w-1/2 lg:px-12">
           <div className="max-w-3xl mx-auto">
-            <h2 class="w-full	mb-5 text-md font-bold tracking-wide title-font">
+            <h2 className="w-full	mb-5 text-md font-bold tracking-wide title-font">
               <InlineTextarea name="tagline" />
             </h2>
             <h3
@@ -38,13 +38,13 @@ export const Hero = ({ data }) => {
                 <InlineTextarea name="headline" />
               </span>
             </h3>
-            <p class="w-full max-w-xl mb-8 text-base opacity-80 transition duration-150 ease-out text-left text-lg leading-relaxed lg:text-xl lg:leading-relaxed">
+            <p className="w-full max-w-xl mb-8 text-base opacity-80 transition duration-150 ease-out text-left text-lg leading-relaxed lg:text-xl lg:leading-relaxed">
               <InlineTextarea name="text" />
             </p>
             <Actions actions={data.actions} />
           </div>
         </div>
-        <div class="relative w-full h-auto lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
+        <div className="relative w-full h-auto lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
           <InlineGroup
             name="image"
             focusRing={{ offset: -16 }}
@@ -52,7 +52,7 @@ export const Hero = ({ data }) => {
             fields={IMAGE_FIELDS}
           >
             <img
-              class="lg:absolute lg:inset-0 w-full h-auto max-h-96 md:max-h-128 lg:max-h-full lg:h-full object-cover"
+              className="lg:absolute lg:inset-0 w-full h-auto max-h-96 md:max-h-128 lg:max-h-full lg:h-full object-cover"
               alt={data.image.alt}
               src={data.image.src}
             />

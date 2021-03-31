@@ -17,24 +17,24 @@ export const Nav = ({ data }) => {
         name="nav"
         fields={NAV_FIELDS}
       >
-        <div class="relative flex flex-col flex-wrap py-8 px-8 lg:px-12 2xl:px-16 mx-auto md:items-center md:flex-row">
+        <div className="relative flex flex-col flex-wrap py-8 px-8 lg:px-12 2xl:px-16 mx-auto md:items-center md:flex-row">
           <a
             href="#"
-            class="pr-2 lg:pr-8 mb-8 md:mb-0 focus:outline-none flex items-center"
+            className="pr-2 lg:pr-8 mb-8 md:mb-0 focus:outline-none flex items-center"
           >
-            <div class="inline-flex items-center">
+            <div className="inline-flex items-center">
               <div class={`mr-2`}>
                 <InlineGroup name="wordmark" focusRing={false}>
                   <Icon icon={data.wordmark.icon} />
                 </InlineGroup>
               </div>
-              <h2 class="font-bold tracking-tight transition duration-150 ease-out transform text-blueGray-500 dark:text-blueGray-200 lg:text-md text-bold">
+              <h2 className="font-bold tracking-tight transition duration-150 ease-out transform text-blueGray-500 dark:text-blueGray-200 lg:text-md text-bold">
                 <InlineText focusRing={{ offset: 8 }} name="wordmark.name" />
               </h2>
             </div>
           </a>
           <div className="flex-grow md:flex md:justify-end">
-            <nav class="flex flex-wrap items-center justify-between sm:justify-end text-base -mx-2 sm:-mx-6 md:mx-0">
+            <nav className="flex flex-wrap items-center justify-between sm:justify-end text-base -mx-2 sm:-mx-6 md:mx-0">
               {data.items.map(function (item, index) {
                 return (
                   <a

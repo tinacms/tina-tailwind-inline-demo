@@ -7,14 +7,14 @@ export const Actions = ({ actions }) => {
   const theme = React.useContext(ThemeContext);
 
   return (
-    <div class="w-full">
+    <div className="w-full">
       <InlineGroup
         name=""
         focusRing={{ offset: { x: 16, y: 8 } }}
         insetControls={true}
         fields={ACTION_FIELDS}
       >
-        <div class="flex flex-wrap items-center -mx-3 -my-2">
+        <div className="flex flex-wrap items-center -mx-3 -my-2">
           {actions &&
             actions.map(function (action, index) {
               let element = null;
