@@ -47,7 +47,7 @@ export const Hero = ({ data }) => {
         <div className="relative w-full h-auto lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
           <InlineGroup
             name="image"
-            focusRing={{ offset: -16 }}
+            focusRing={{ offset: 0, borderRadius: 0 }}
             insetControls={true}
             fields={IMAGE_FIELDS}
           >
