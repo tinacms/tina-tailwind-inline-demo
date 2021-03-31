@@ -1,8 +1,14 @@
 {
-  "name": "tina-inline-demo",
-  "version": "1.0.0",
+  "name": "tina-tailwind-demo",
+  "version": "0.0.1",
   "description": "",
-  "keywords": [],
+  "keywords": [
+    "tailwindcss",
+    "react",
+    "cms",
+    "tina",
+    "tinacms"
+  ],
   "main": "src/index.js",
   "dependencies": {
     "@babel/runtime": "7.13.8",
