@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useForm, useFormScreenPlugin } from "tinacms";
-import ThemeData from "../theme.json";
+import ThemeData from "../data/theme.json";
 
 export const ThemeContext = React.createContext(ThemeData);
 

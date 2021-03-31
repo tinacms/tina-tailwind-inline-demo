@@ -1,18 +1,18 @@
 import * as React from "react";
-import "./styles.css";
+
 import { useCMS, withTina, useForm, usePlugin } from "tinacms";
 import { InlineForm, InlineBlocks } from "react-tinacms-inline";
-import { HeroBlock, hero_template } from "./components/hero";
+import { HeroBlock, hero_template } from "../components/hero";
 import {
   TestimonialBlock,
   testimonial_template,
-} from "./components/testimonial";
-import { Nav } from "./components/nav";
-import { Footer } from "./components/footer";
-import { FeaturesBlock, features_template } from "./components/features";
-import { TinaModal } from "./components/modal";
-import { Theme } from "./components/theme";
-import HomeData from "./home.json";
+} from "../components/testimonial";
+import { Nav } from "../components/nav";
+import { Footer } from "../components/footer";
+import { FeaturesBlock, features_template } from "../components/features";
+import { TinaModal } from "../components/modal";
+import { Theme } from "../components/theme";
+import HomeData from "../data/home.json";
 
 const App = () => {
   const cms = useCMS();
