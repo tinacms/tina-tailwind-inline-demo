@@ -69,4 +69,6 @@ const PAGE_BLOCKS = {
   },
 };
 
-export default withTina(App, { enabled: true, sidebar: false, toolbar: true });
+const tinaOptions = { enabled: true, sidebar: false, toolbar: true };
+
+export default withTina(App, tinaOptions);
