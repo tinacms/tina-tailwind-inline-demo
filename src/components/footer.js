@@ -6,7 +6,7 @@ import {
   BlocksControls,
   InlineTextarea,
 } from "react-tinacms-inline";
-import { FaInstagram, FaFacebookF, FaTwitter } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaTwitter, FaGithub } from "react-icons/fa";
 
 export const Footer = ({ data, name = "" }) => {
   const theme = React.useContext(ThemeContext);
@@ -52,23 +52,42 @@ export const Footer = ({ data, name = "" }) => {
             <div className="container flex flex-col flex-wrap p-7 mx-auto sm:flex-row justify-center">
               <div className="flex justify-center">
                 {data.social.facebook && (
-                  <a href={data.social.facebook} className="mx-2">
+                  <a
+                    href={data.social.facebook}
+                    target="_blank"
+                    className="mx-2"
+                  >
                     <FaFacebookF
                       className={`h-6 w-auto text-white hover:text-${theme.color}-500`}
                     />
                   </a>
                 )}
                 {data.social.twitter && (
-                  <a href={data.social.twitter} className="mx-2">
+                  <a
+                    href={data.social.twitter}
+                    target="_blank"
+                    className="mx-2"
+                  >
                     <FaTwitter
-                      className={`h-7 w-auto text-white hover:text-${theme.color}-500`}
+                      className={`h-6 w-auto text-white hover:text-${theme.color}-500`}
                     />
                   </a>
                 )}
                 {data.social.instagram && (
-                  <a href={data.social.instagram} className="mx-2">
+                  <a
+                    href={data.social.instagram}
+                    target="_blank"
+                    className="mx-2"
+                  >
                     <FaInstagram
-                      className={`h-7 w-auto text-white hover:text-${theme.color}-500`}
+                      className={`h-6 w-auto text-white hover:text-${theme.color}-500`}
+                    />
+                  </a>
+                )}
+                {data.social.github && (
+                  <a href={data.social.github} target="_blank" className="mx-2">
+                    <FaGithub
+                      className={`h-6 w-auto text-white hover:text-${theme.color}-500`}
                     />
                   </a>
                 )}
@@ -208,6 +227,11 @@ export const FOOTER_FIELDS = [
       {
         name: "instagram",
         label: "Instagram",
+        component: "text",
+      },
+      {
+        name: "github",
+        label: "Github",
         component: "text",
       },
     ],

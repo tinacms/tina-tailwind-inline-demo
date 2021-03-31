@@ -105,9 +105,8 @@
   ],
   "footer": {
     "social": {
-      "facebook": "/",
-      "twitter": "/",
-      "instagram": "/"
+      "twitter": "https://twitter.com/tina_cms",
+      "github": "https://github.com/tinacms/tina-tailwind-demo"
     },
     "navlist": [
       {
