@@ -19,7 +19,7 @@ export const FeatureBlock = ({ index, data }) => {
         insetControls={false}
       >
         <div className="max-w-lg">
-          <div class={`mb-6 w-auto inline-block`}>
+          <div className={`mb-6 w-auto inline-block`}>
             <Icon icon={data.icon} />
           </div>
           <h3 className="mb-4 transition duration-150 ease-out text-2xl font-semibold title-font">

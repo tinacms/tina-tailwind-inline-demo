@@ -14,5 +14,5 @@ export const Section = ({ variant = "default", children }) => {
     variantClasses = `relative transition duration-150 ease-out text-gray-700 dark:text-gray-100 bg-gray-50 dark:bg-gray-700 body-font overflow-hidden`;
   }
 
-  return <section class={variantClasses}>{children}</section>;
+  return <section className={variantClasses}>{children}</section>;
 };

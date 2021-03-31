@@ -92,7 +92,7 @@ export const FooterNavBlock = ({ index, data }) => {
         insetControls={false}
       >
         <h3
-          class={`mb-3 text-sm font-semibold tracking-widest text-${theme.color}-400 uppercase title-font`}
+          className={`mb-3 text-sm font-semibold tracking-widest text-${theme.color}-400 uppercase title-font`}
         >
           <InlineTextarea name="title" />
         </h3>
@@ -100,7 +100,7 @@ export const FooterNavBlock = ({ index, data }) => {
           {data.items &&
             data.items.map(function (item, index) {
               return (
-                <li>
+                <li key={index}>
                   <a
                     href={item.link}
                     className="text-sm text-gray-200 hover:text-white"

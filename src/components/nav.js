@@ -23,7 +23,7 @@ export const Nav = ({ data }) => {
             className="pr-2 lg:pr-8 mb-8 md:mb-0 focus:outline-none flex items-center"
           >
             <div className="inline-flex items-center">
-              <div class={`mr-2`}>
+              <div className={`mr-2`}>
                 <InlineGroup name="wordmark" focusRing={false}>
                   <Icon icon={data.wordmark.icon} />
                 </InlineGroup>
@@ -38,8 +38,9 @@ export const Nav = ({ data }) => {
               {data.items.map(function (item, index) {
                 return (
                   <a
+                    key={index}
                     href="#"
-                    class={`mx-2 sm:mx-6 md:mx-8 text-sm tracking-wide font-semibold transition duration-150 ease-out text-gray-600 dark:text-gray-200`}
+                    className={`mx-2 sm:mx-6 md:mx-8 text-sm tracking-wide font-semibold transition duration-150 ease-out text-gray-600 dark:text-gray-200`}
                   >
                     {item.label}
                   </a>

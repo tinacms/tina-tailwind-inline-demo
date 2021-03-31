@@ -21,7 +21,8 @@ export const Actions = ({ actions }) => {
               if (action.type === "button") {
                 element = (
                   <button
-                    class={`z-10 relative flex items-center px-7 py-3 mx-3 my-2 font-semibold text-lg transition duration-150 ease-out text-white transition duration-500 ease-in-out ${
+                    key={index}
+                    className={`z-10 relative flex items-center px-7 py-3 mx-3 my-2 font-semibold text-lg transition duration-150 ease-out text-white transition duration-500 ease-in-out ${
                       theme.button.style === "rounded" && `rounded-lg`
                     } ${
                       theme.button.style === "round" && `rounded-full`
@@ -39,7 +40,7 @@ export const Actions = ({ actions }) => {
                       />
                     )}
                     <div
-                      class={`pointer-events-none absolute top-2 opacity-30 dark:opacity-50 left-0 w-full h-full rounded-full bg-${theme.color}-400 -z-1`}
+                      className={`pointer-events-none absolute top-2 opacity-30 dark:opacity-50 left-0 w-full h-full rounded-full bg-${theme.color}-400 -z-1`}
                       style={{ filter: "blur(1.5rem)" }}
                     ></div>
                   </button>
@@ -48,8 +49,9 @@ export const Actions = ({ actions }) => {
               if (action.type === "link" || action.type === "linkExternal") {
                 element = (
                   <a
+                    key={index}
                     href="#"
-                    class={`inline-flex items-center font-semibold mx-3 my-2 text-lg transition duration-150 ease-out text-${theme.color}-600 dark:text-${theme.color}-400 hover:text-${theme.color}-400 dark:hover:text-${theme.color}-500`}
+                    className={`inline-flex items-center font-semibold mx-3 my-2 text-lg transition duration-150 ease-out text-${theme.color}-600 dark:text-${theme.color}-400 hover:text-${theme.color}-400 dark:hover:text-${theme.color}-500`}
                   >
                     {action.label}
                     {action.icon && (

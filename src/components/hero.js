@@ -20,7 +20,7 @@ export const Hero = ({ data }) => {
               <InlineTextarea name="tagline" />
             </h2>
             <h3
-              class={`w-full relative	mb-6 text-5xl font-extrabold tracking-normal text-left title-font`}
+              className={`w-full relative	mb-6 text-5xl font-extrabold tracking-normal text-left title-font`}
             >
               <span
                 className={`absolute z-20 pointer-events-none w-full top-0 -bottom-4 bg-clip-text text-transparent bg-gradient-to-r from-${theme.color}-400 to-${theme.color}-600`}
