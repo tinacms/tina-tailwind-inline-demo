@@ -61,6 +61,10 @@ export const Icon = ({ icon }) => {
       return (
         <div
           className={`relative z-10 inline-flex items-center justify-center flex-shrink-0 w-${iconSize} h-${iconSize} bg-${iconColor}-400 dark:bg-${iconColor}-500 text-${iconColor}-50 rounded-full`}
+          style={{
+            textShadow: "0 2px 5px rgba(0,0,0,0.1)",
+            boxShadow: `0 0.5rem 3rem 0px rgba(var(--color-rgb-${iconColor}-400),0.35)`,
+          }}
         >
           <IconSVG
             className={`w-${Math.max(iconSize - 5, 6)} h-${Math.max(
@@ -68,10 +72,6 @@ export const Icon = ({ icon }) => {
               6
             )}`}
           />
-          <div
-            className={`absolute -z-1 top-2 opacity-30 dark:opacity-40 left-0 w-${iconSize} h-${iconSize} bg-${iconColor}-400 dark:bg-${iconColor}-500`}
-            style={{ filter: "blur(1.75rem)" }}
-          ></div>
         </div>
       );
     } else {
