@@ -24,13 +24,9 @@ export const Hero = ({ data }) => {
             >
               <span
                 className={`absolute z-20 pointer-events-none w-full top-0 -bottom-4 bg-clip-text text-transparent bg-gradient-to-r from-${theme.color}-400 to-${theme.color}-600`}
-              >
-                {data.headline}
-              </span>
-              <span
-                aria-hidden="true"
-                className={`absolute z-10 opacity-30 dark:opacity-50 pointer-events-none w-full h-full bg-clip-text text-transparent bg-gradient-to-r from-${theme.color}-400 to-${theme.color}-600`}
-                style={{ filter: "blur(1.5rem)" }}
+                style={{
+                  textShadow: `0 0.5rem 3rem rgba(var(--color-rgb-${theme.color}-400),0.35)`,
+                }}
               >
                 {data.headline}
               </span>
