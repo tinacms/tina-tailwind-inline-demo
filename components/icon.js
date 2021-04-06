@@ -78,6 +78,9 @@ export const Icon = ({ icon }) => {
       return (
         <IconSVG
           className={`w-${iconSize} h-${iconSize} text-${iconColor}-400 dark:text-${iconColor}-500`}
+          style={{
+            filter: `drop-shadow(0 0.5rem 1rem rgba(var(--color-rgb-${iconColor}-400),0.4))`,
+          }}
         />
       );
     }
