@@ -1,3 +1,4 @@
+const chroma = require("chroma-js");
 const colors = require("tailwindcss/colors");
 
 module.exports = {
@@ -45,9 +46,16 @@ module.exports = {
         return Object.keys(colorObj).reduce((vars, colorKey) => {
           const value = colorObj[colorKey];
 
+          if (value === "transparent" || value === "currentColor") return;
+
           const newVars =
             typeof value === "string"
-              ? { [`--color${colorGroup}-${colorKey}`]: value }
+              ? {
+                  [`--color${colorGroup}-${colorKey}`]: value,
+                  [`--color-rgb${colorGroup}-${colorKey}`]: chroma(value)
+                    .rgb()
+                    .toString(),
+                }
               : extractColorVars(value, `-${colorKey}`);
 
           return { ...vars, ...newVars };
