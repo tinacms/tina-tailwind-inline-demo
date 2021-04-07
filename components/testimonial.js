@@ -82,5 +82,32 @@ export const testimonial_template = {
       label: "Author",
       component: "text",
     },
+
+    {
+      name: "style",
+      label: "Style",
+      component: "group",
+      fields: [
+        {
+          name: "color",
+          label: "Color",
+          component: "select",
+          options: [
+            {
+              label: "Default",
+              value: "default",
+            },
+            {
+              label: "Tint",
+              value: "tint",
+            },
+            {
+              label: "Primary",
+              value: "primary",
+            },
+          ],
+        },
+      ],
+    },
   ],
 };
