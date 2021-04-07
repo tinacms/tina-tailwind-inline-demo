@@ -6,7 +6,7 @@ import {
   InlineTextarea,
 } from "react-tinacms-inline";
 import { ACTION_FIELDS, Actions } from "./actions";
-import { Section } from "./section";
+import { Section, SectionFields } from "./section";
 
 export const Hero = ({ data }) => {
   const theme = React.useContext(ThemeContext);
@@ -127,23 +127,7 @@ export const hero_template = {
       name: "",
       label: "Text",
       component: "group",
-      fields: [
-        {
-          name: "tagline",
-          label: "Tagline",
-          component: "text",
-        },
-        {
-          name: "headline",
-          label: "Headline",
-          component: "text",
-        },
-        {
-          name: "text",
-          label: "Text",
-          component: "textarea",
-        },
-      ],
+      fields: [...SectionFields],
     },
     {
       name: "image",

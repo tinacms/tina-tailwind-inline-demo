@@ -5,7 +5,7 @@ import {
 } from "react-tinacms-inline";
 import { Icon, ICON_FIELDS } from "./icon";
 import { Actions, ACTION_FIELDS } from "./actions";
-import { Section } from "./section";
+import { Section, SectionFields } from "./section";
 
 export const FeatureBlock = ({ index, data }) => {
   return (
@@ -179,27 +179,7 @@ export const features_template = {
       name: "style",
       label: "Style",
       component: "group",
-      fields: [
-        {
-          name: "color",
-          label: "Color",
-          component: "select",
-          options: [
-            {
-              label: "Default",
-              value: "default",
-            },
-            {
-              label: "Tint",
-              value: "tint",
-            },
-            {
-              label: "Primary",
-              value: "primary",
-            },
-          ],
-        },
-      ],
+      fields: [...SectionFields],
     },
   ],
 };

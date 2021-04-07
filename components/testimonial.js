@@ -1,6 +1,6 @@
 import * as React from "react";
 import { ThemeContext } from "./theme";
-import { Section } from "./section";
+import { Section, SectionFields } from "./section";
 import {
   BlocksControls,
   InlineText,
@@ -82,32 +82,11 @@ export const testimonial_template = {
       label: "Author",
       component: "text",
     },
-
     {
       name: "style",
       label: "Style",
       component: "group",
-      fields: [
-        {
-          name: "color",
-          label: "Color",
-          component: "select",
-          options: [
-            {
-              label: "Default",
-              value: "default",
-            },
-            {
-              label: "Tint",
-              value: "tint",
-            },
-            {
-              label: "Primary",
-              value: "primary",
-            },
-          ],
-        },
-      ],
+      fields: [...SectionFields],
     },
   ],
 };
