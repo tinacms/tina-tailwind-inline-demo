@@ -51,6 +51,9 @@ export const Actions = ({ actions }) => {
                     key={index}
                     href="#"
                     className={`inline-flex items-center font-semibold mx-3 my-2 text-lg transition duration-150 ease-out text-${theme.color}-600 dark:text-${theme.color}-400 hover:text-${theme.color}-400 dark:hover:text-${theme.color}-500`}
+                    style={{
+                      textShadow: `0 3px 7px rgba(var(--color-rgb-${theme.color}-400),0.2)`,
+                    }}
                   >
                     {action.label}
                     {action.icon && (

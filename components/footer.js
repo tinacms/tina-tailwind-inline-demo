@@ -113,6 +113,9 @@ export const FooterNavBlock = ({ index, data }) => {
       >
         <h3
           className={`mb-3 text-sm font-semibold tracking-widest text-${theme.color}-400 uppercase title-font`}
+          style={{
+            textShadow: `0 1px 3px rgba(var(--color-rgb-${theme.color}-600),0.3)`,
+          }}
         >
           <InlineTextarea name="title" />
         </h3>
