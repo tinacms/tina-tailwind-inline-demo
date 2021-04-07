@@ -109,19 +109,26 @@ export const hero_template = {
   },
   fields: [
     {
-      name: "tagline",
-      label: "Tagline",
-      component: "text",
-    },
-    {
-      name: "headline",
-      label: "Headline",
-      component: "text",
-    },
-    {
-      name: "text",
+      name: "",
       label: "Text",
-      component: "textarea",
+      component: "group",
+      fields: [
+        {
+          name: "tagline",
+          label: "Tagline",
+          component: "text",
+        },
+        {
+          name: "headline",
+          label: "Headline",
+          component: "text",
+        },
+        {
+          name: "text",
+          label: "Text",
+          component: "textarea",
+        },
+      ],
     },
     {
       name: "image",
