@@ -63,7 +63,7 @@ export const Icon = ({ icon }) => {
           className={`relative z-10 inline-flex items-center justify-center flex-shrink-0 w-${iconSize} h-${iconSize} bg-${iconColor}-400 dark:bg-${iconColor}-500 text-${iconColor}-50 rounded-full`}
           style={{
             textShadow: "0 2px 5px rgba(0,0,0,0.1)",
-            boxShadow: `0 0.5rem 3rem 0px rgba(var(--color-rgb-${iconColor}-400),0.35)`,
+            boxShadow: `0 0.5rem 3rem 0px rgba(var(--color-rgb-${iconColor}-600),0.35)`,
           }}
         >
           <IconSVG
@@ -79,7 +79,7 @@ export const Icon = ({ icon }) => {
         <IconSVG
           className={`w-${iconSize} h-${iconSize} text-${iconColor}-400 dark:text-${iconColor}-500`}
           style={{
-            filter: `drop-shadow(0 0.5rem 1rem rgba(var(--color-rgb-${iconColor}-400),0.4))`,
+            filter: `drop-shadow(0 0.5rem 1rem rgba(var(--color-rgb-${iconColor}-600),0.4))`,
           }}
         />
       );

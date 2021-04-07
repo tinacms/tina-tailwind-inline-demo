@@ -11,7 +11,7 @@ export const Section = ({ variant = "default", children }) => {
   }
 
   if (variant === "primary") {
-    variantClasses = `relative transition duration-150 ease-out text-gray-700 dark:text-gray-100 bg-gray-50 dark:bg-gray-700 body-font overflow-hidden`;
+    variantClasses = `relative transition duration-150 ease-out text-gray-700 dark:text-gray-100 bg-${theme.color}-700 bg-gradient-to-br from-${theme.color}-500 to-${theme.color}-700 body-font overflow-hidden`;
   }
 
   return <section className={variantClasses}>{children}</section>;

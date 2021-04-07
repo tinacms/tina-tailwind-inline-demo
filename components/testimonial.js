@@ -1,19 +1,18 @@
 import * as React from "react";
 import { ThemeContext } from "./theme";
+import { Section } from "./section";
 import {
   BlocksControls,
   InlineText,
   InlineTextarea,
 } from "react-tinacms-inline";
 
-export const Testimonial = () => {
+export const Testimonial = ({ data }) => {
   const theme = React.useContext(ThemeContext);
 
   return (
-    <section
-      className={`py-24 bg-${theme.color}-700 bg-gradient-to-br from-${theme.color}-500 to-${theme.color}-700`}
-    >
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <Section variant={data.style.color}>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div className="relative">
           <blockquote>
             <div className="relative z-10 max-w-3xl mx-auto text-4xl lg:text-5xl font-extrabold tracking-normal text-center title-font text-white">
@@ -46,7 +45,7 @@ export const Testimonial = () => {
           </blockquote>
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 
@@ -68,6 +67,9 @@ export const testimonial_template = {
     quote:
       "There are only two hard things in Computer Science: cache invalidation and naming things.",
     author: "Phil Karlton",
+    style: {
+      color: "primary",
+    },
   },
   fields: [
     {

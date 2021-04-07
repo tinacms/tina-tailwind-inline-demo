@@ -33,7 +33,7 @@ export const Actions = ({ actions }) => {
                     }-600 focus:shadow-outline focus:outline-none focus:ring-2 ring-offset-current ring-offset-2 whitespace-nowrap`}
                     style={{
                       textShadow: "0 2px 5px rgba(0,0,0,0.1)",
-                      boxShadow: `0 0.5rem 3rem 0px rgba(var(--color-rgb-${theme.color}-400),0.35)`,
+                      boxShadow: `0 0.5rem 3rem 0px rgba(var(--color-rgb-${theme.color}-600),0.35)`,
                     }}
                   >
                     {action.label}

@@ -53,6 +53,9 @@ export const feature_template = {
         icon: "true",
       },
     ],
+    style: {
+      color: "default",
+    },
   },
   itemProps: (item) => ({
     label: item.title,
@@ -75,7 +78,7 @@ export const feature_template = {
 
 export const Features = ({ data }) => {
   return (
-    <Section>
+    <Section variant={data.style.color}>
       <div className="container py-12 lg:py-24 mx-auto">
         <InlineBlocks
           direction="horizontal"
@@ -171,6 +174,32 @@ export const features_template = {
       templates: {
         feature: feature_template,
       },
+    },
+    {
+      name: "style",
+      label: "Style",
+      component: "group",
+      fields: [
+        {
+          name: "color",
+          label: "Color",
+          component: "select",
+          options: [
+            {
+              label: "Default",
+              value: "default",
+            },
+            {
+              label: "Tint",
+              value: "tint",
+            },
+            {
+              label: "Primary",
+              value: "primary",
+            },
+          ],
+        },
+      ],
     },
   ],
 };

@@ -44,7 +44,10 @@
           "label": "Learn More",
           "type": "link"
         }
-      ]
+      ],
+      "style": {
+        "color": "tint"
+      }
     },
     {
       "_template": "features",
@@ -100,7 +103,10 @@
             }
           ]
         }
-      ]
+      ],
+      "style": {
+        "color": "default"
+      }
     }
   ],
   "footer": {

@@ -12,7 +12,7 @@ export const Hero = ({ data }) => {
   const theme = React.useContext(ThemeContext);
 
   return (
-    <Section variant="tint">
+    <Section variant={data.style.color}>
       <div className="w-full pt-20 lg:py-56 lg:text-left">
         <div className="px-8 pb-20 lg:pb-0 lg:w-1/2 lg:px-12">
           <div className="max-w-3xl mx-auto">
@@ -22,14 +22,26 @@ export const Hero = ({ data }) => {
             <h3
               className={`w-full relative	mb-6 text-5xl font-extrabold tracking-normal text-left title-font`}
             >
-              <span
-                className={`absolute z-20 pointer-events-none w-full top-0 -bottom-4 bg-clip-text text-transparent bg-gradient-to-r from-${theme.color}-400 to-${theme.color}-600`}
-                style={{
-                  textShadow: `0 0.5rem 3rem rgba(var(--color-rgb-${theme.color}-400),0.35)`,
-                }}
-              >
-                {data.headline}
-              </span>
+              {data.style.color === "primary" ? (
+                <span
+                  className={`absolute z-20 pointer-events-none w-full top-0 -bottom-4 bg-clip-text text-transparent bg-gradient-to-r from-gray-600 to-gray-800`}
+                  style={{
+                    textShadow: `0 0.5rem 3rem rgba(var(--color-rgb-${theme.color}-600),0.35)`,
+                  }}
+                >
+                  {data.headline}
+                </span>
+              ) : (
+                <span
+                  className={`absolute z-20 pointer-events-none w-full top-0 -bottom-4 bg-clip-text text-transparent bg-gradient-to-r from-${theme.color}-400 to-${theme.color}-600`}
+                  style={{
+                    textShadow: `0 0.5rem 3rem rgba(var(--color-rgb-${theme.color}-600),0.35)`,
+                  }}
+                >
+                  {data.headline}
+                </span>
+              )}
+
               <span className="-z-1">
                 <InlineTextarea name="headline" />
               </span>
@@ -106,6 +118,9 @@ export const hero_template = {
         type: "link",
       },
     ],
+    style: {
+      color: "tint",
+    },
   },
   fields: [
     {
@@ -137,5 +152,31 @@ export const hero_template = {
       fields: IMAGE_FIELDS,
     },
     ...ACTION_FIELDS,
+    {
+      name: "style",
+      label: "Style",
+      component: "group",
+      fields: [
+        {
+          name: "color",
+          label: "Color",
+          component: "select",
+          options: [
+            {
+              label: "Default",
+              value: "default",
+            },
+            {
+              label: "Tint",
+              value: "tint",
+            },
+            {
+              label: "Primary",
+              value: "primary",
+            },
+          ],
+        },
+      ],
+    },
   ],
 };
