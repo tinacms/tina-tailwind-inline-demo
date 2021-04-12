@@ -1,3 +1,6 @@
+> ## **🚧 THIS IS EXPERIMENTAL 🚧**
+> Please note that Tina's inline editing is an experimental feature and is prone to breaking changes.
+
 # Tina + Tailwind + Next.js Demo Project
 
 ## An inline-editing demo built with [Tina](https://github.com/tinacms/tinacms), [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss), and [Next.js](https://github.com/vercel/next.js/).
